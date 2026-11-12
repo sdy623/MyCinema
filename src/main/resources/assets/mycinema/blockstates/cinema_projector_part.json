@@ -1,0 +1,5 @@
+{
+  "multipart": [
+    { "apply": { "model": "mycinema:block/cinema_projector_part" } }
+  ]
+}

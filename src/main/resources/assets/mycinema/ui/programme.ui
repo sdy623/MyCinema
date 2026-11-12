@@ -1,0 +1,56 @@
+theme "waterframes:waterui"
+var heading
+var summary
+var current
+var status
+var selection
+var notice
+var can_command
+var can_stop
+var can_choose
+var can_previous_page
+var can_next_page
+var clip_0
+var clip_1
+var clip_2
+var clip_3
+var clip_4
+var clip_5
+var clip_6
+var clip_7
+root[frame=EDGE,orientation=VERTICAL,align=STRETCH,spacing=4,padding=7]
+Text[component=heading,width=FILL,height=18,ellipsize=true]
+Text[component=summary,width=FILL,height=14,ellipsize=true]
+Text[component=current,width=FILL,height=14,ellipsize=true]
+Text[component=status,width=FILL,height=20,lines=2,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="selection_previous",component="<",enabled=can_choose,width=28,height=20]
+ Text[component=selection,width=FILL,height=20]
+ Button[id="selection_next",component=">",enabled=can_choose,width=28,height=20]
+}
+Parent[orientation=VERTICAL,width=FILL,height=FILL,spacing=2,padding=3,border=1] {
+ Text[component=clip_0,width=FILL,height=17,ellipsize=true]
+ Text[component=clip_1,width=FILL,height=17,ellipsize=true]
+ Text[component=clip_2,width=FILL,height=17,ellipsize=true]
+ Text[component=clip_3,width=FILL,height=17,ellipsize=true]
+ Text[component=clip_4,width=FILL,height=17,ellipsize=true]
+ Text[component=clip_5,width=FILL,height=17,ellipsize=true]
+ Text[component=clip_6,width=FILL,height=17,ellipsize=true]
+ Text[component=clip_7,width=FILL,height=17,ellipsize=true]
+}
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="page_previous",component="translatable:mycinema.programme.page_previous",enabled=can_previous_page,width=FILL,height=19]
+ Button[id="page_next",component="translatable:mycinema.programme.page_next",enabled=can_next_page,width=FILL,height=19]
+}
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="previous",component="translatable:mycinema.programme.previous",enabled=can_command,width=FILL,height=20]
+ Button[id="play",component="translatable:mycinema.ui.play",enabled=can_command,width=FILL,height=20]
+ Button[id="pause",component="translatable:mycinema.ui.pause",enabled=can_command,width=FILL,height=20]
+ Button[id="next",component="translatable:mycinema.programme.next",enabled=can_command,width=FILL,height=20]
+}
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="choose",component="translatable:mycinema.programme.choose",enabled=can_choose,width=FILL,height=20]
+ Button[id="stop",component="translatable:mycinema.ui.stop",enabled=can_stop,width=FILL,height=20]
+}
+Text[component=notice,width=FILL,height=18,ellipsize=true]
+Button[id="done",component="translatable:mycinema.ui.done",width=FILL,height=19]

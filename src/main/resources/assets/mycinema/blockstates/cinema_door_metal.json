@@ -1,0 +1,292 @@
+{
+  "variants": {
+    "facing=north,hinge=left,open=false,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_south"
+    },
+    "facing=north,hinge=left,open=false,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_south_half_drop"
+    },
+    "facing=north,hinge=left,open=true,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_west"
+    },
+    "facing=north,hinge=left,open=true,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_west_half_drop"
+    },
+    "facing=north,hinge=right,open=false,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_south"
+    },
+    "facing=north,hinge=right,open=false,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_south_half_drop"
+    },
+    "facing=north,hinge=right,open=true,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_east"
+    },
+    "facing=north,hinge=right,open=true,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_east_half_drop"
+    },
+    "facing=east,hinge=left,open=false,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_west"
+    },
+    "facing=east,hinge=left,open=false,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_west_half_drop"
+    },
+    "facing=east,hinge=left,open=true,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_north"
+    },
+    "facing=east,hinge=left,open=true,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_north_half_drop"
+    },
+    "facing=east,hinge=right,open=false,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_west"
+    },
+    "facing=east,hinge=right,open=false,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_west_half_drop"
+    },
+    "facing=east,hinge=right,open=true,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_south"
+    },
+    "facing=east,hinge=right,open=true,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_south_half_drop"
+    },
+    "facing=south,hinge=left,open=false,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_north"
+    },
+    "facing=south,hinge=left,open=false,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_north_half_drop"
+    },
+    "facing=south,hinge=left,open=true,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_east"
+    },
+    "facing=south,hinge=left,open=true,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_east_half_drop"
+    },
+    "facing=south,hinge=right,open=false,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_north"
+    },
+    "facing=south,hinge=right,open=false,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_north_half_drop"
+    },
+    "facing=south,hinge=right,open=true,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_west"
+    },
+    "facing=south,hinge=right,open=true,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_west_half_drop"
+    },
+    "facing=west,hinge=left,open=false,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_east"
+    },
+    "facing=west,hinge=left,open=false,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_east_half_drop"
+    },
+    "facing=west,hinge=left,open=true,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_south"
+    },
+    "facing=west,hinge=left,open=true,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_south_half_drop"
+    },
+    "facing=west,hinge=right,open=false,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_east"
+    },
+    "facing=west,hinge=right,open=false,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_east_half_drop"
+    },
+    "facing=west,hinge=right,open=true,part=lower,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_lower_north"
+    },
+    "facing=west,hinge=right,open=true,part=lower,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_lower_north_half_drop"
+    },
+    "facing=north,hinge=left,open=false,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_south"
+    },
+    "facing=north,hinge=left,open=false,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_south"
+    },
+    "facing=north,hinge=left,open=true,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_west"
+    },
+    "facing=north,hinge=left,open=true,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_west"
+    },
+    "facing=north,hinge=right,open=false,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_south"
+    },
+    "facing=north,hinge=right,open=false,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_south"
+    },
+    "facing=north,hinge=right,open=true,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_east"
+    },
+    "facing=north,hinge=right,open=true,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_east"
+    },
+    "facing=east,hinge=left,open=false,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_west"
+    },
+    "facing=east,hinge=left,open=false,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_west"
+    },
+    "facing=east,hinge=left,open=true,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_north"
+    },
+    "facing=east,hinge=left,open=true,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_north"
+    },
+    "facing=east,hinge=right,open=false,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_west"
+    },
+    "facing=east,hinge=right,open=false,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_west"
+    },
+    "facing=east,hinge=right,open=true,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_south"
+    },
+    "facing=east,hinge=right,open=true,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_south"
+    },
+    "facing=south,hinge=left,open=false,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_north"
+    },
+    "facing=south,hinge=left,open=false,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_north"
+    },
+    "facing=south,hinge=left,open=true,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_east"
+    },
+    "facing=south,hinge=left,open=true,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_east"
+    },
+    "facing=south,hinge=right,open=false,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_north"
+    },
+    "facing=south,hinge=right,open=false,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_north"
+    },
+    "facing=south,hinge=right,open=true,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_west"
+    },
+    "facing=south,hinge=right,open=true,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_west"
+    },
+    "facing=west,hinge=left,open=false,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_east"
+    },
+    "facing=west,hinge=left,open=false,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_east"
+    },
+    "facing=west,hinge=left,open=true,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_south"
+    },
+    "facing=west,hinge=left,open=true,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_south"
+    },
+    "facing=west,hinge=right,open=false,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_east"
+    },
+    "facing=west,hinge=right,open=false,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_east"
+    },
+    "facing=west,hinge=right,open=true,part=middle,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_middle_north"
+    },
+    "facing=west,hinge=right,open=true,part=middle,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_middle_north"
+    },
+    "facing=north,hinge=left,open=false,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_south"
+    },
+    "facing=north,hinge=left,open=false,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_south"
+    },
+    "facing=north,hinge=left,open=true,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_west"
+    },
+    "facing=north,hinge=left,open=true,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_west"
+    },
+    "facing=north,hinge=right,open=false,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_south"
+    },
+    "facing=north,hinge=right,open=false,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_south"
+    },
+    "facing=north,hinge=right,open=true,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_east"
+    },
+    "facing=north,hinge=right,open=true,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_east"
+    },
+    "facing=east,hinge=left,open=false,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_west"
+    },
+    "facing=east,hinge=left,open=false,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_west"
+    },
+    "facing=east,hinge=left,open=true,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_north"
+    },
+    "facing=east,hinge=left,open=true,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_north"
+    },
+    "facing=east,hinge=right,open=false,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_west"
+    },
+    "facing=east,hinge=right,open=false,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_west"
+    },
+    "facing=east,hinge=right,open=true,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_south"
+    },
+    "facing=east,hinge=right,open=true,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_south"
+    },
+    "facing=south,hinge=left,open=false,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_north"
+    },
+    "facing=south,hinge=left,open=false,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_north"
+    },
+    "facing=south,hinge=left,open=true,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_east"
+    },
+    "facing=south,hinge=left,open=true,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_east"
+    },
+    "facing=south,hinge=right,open=false,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_north"
+    },
+    "facing=south,hinge=right,open=false,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_north"
+    },
+    "facing=south,hinge=right,open=true,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_west"
+    },
+    "facing=south,hinge=right,open=true,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_west"
+    },
+    "facing=west,hinge=left,open=false,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_east"
+    },
+    "facing=west,hinge=left,open=false,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_east"
+    },
+    "facing=west,hinge=left,open=true,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_south"
+    },
+    "facing=west,hinge=left,open=true,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_south"
+    },
+    "facing=west,hinge=right,open=false,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_east"
+    },
+    "facing=west,hinge=right,open=false,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_east"
+    },
+    "facing=west,hinge=right,open=true,part=upper,half_drop=false": {
+      "model": "mycinema:block/cinema_door_metal_upper_north"
+    },
+    "facing=west,hinge=right,open=true,part=upper,half_drop=true": {
+      "model": "mycinema:block/cinema_door_metal_upper_north"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+* text=auto eol=lf
+
+# These fingerprinted data resources are byte-stable release inputs.
+# Git must not rewrite their line endings on Windows checkouts.
+src/main/resources/data/mycinema/seat_collision/*.json -text

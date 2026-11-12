@@ -1,0 +1,81 @@
+theme "waterframes:waterui"
+var heading
+var assembly
+var can_assemble
+var shape_label
+var shape_editable
+var mode_label
+var information_mode
+var editable
+var can_reload
+var dimensions
+var step_label
+var preview
+var notice
+root[frame=EDGE,orientation=VERTICAL,align=STRETCH,spacing=4,padding=7]
+Text[component=heading,width=FILL,height=16,ellipsize=true]
+Parent[orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=4,padding=0,border=0] {
+ Text[component=mode_label,width=FILL,height=16]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+  Button[id="mode_picture",component="translatable:mycinema.ad.mode.picture",enabled=editable,width=FILL,height=20]
+  Button[id="mode_media",component="translatable:mycinema.ad.mode.media",enabled=editable,width=FILL,height=20]
+  Button[id="mode_information",component="translatable:mycinema.ad.mode.information",enabled=editable,width=FILL,height=20]
+ }
+ Text[component="translatable:mycinema.ad.mode_hint",width=FILL,height=42,lines=3]
+ Text[component="translatable:mycinema.ad.mirror_hint",width=FILL,height=56,lines=4]
+ Button[id="info_settings",component="translatable:mycinema.ad.info_settings",enabled=information_mode,width=FILL,height=20]
+ Text[component="translatable:mycinema.ad.image_source",width=FILL,height=14]
+ InputText[id="poster",enabled=editable,width=FILL,height=20]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+  Button[id="choose_local",component="translatable:mycinema.picture.local_button",enabled=editable,width=FILL,height=20]
+  Button[id="upload_picture",component="translatable:mycinema.picture.upload_button",enabled=editable,width=FILL,height=20]
+ }
+ Text[component="translatable:mycinema.picture.delivery_hint",width=FILL,height=42,lines=3]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+  Button[id="save_picture",component="translatable:mycinema.ad.save_picture",enabled=editable,width=FILL,height=20]
+  Button[id="clear_picture",component="translatable:mycinema.ad.clear_picture",enabled=editable,width=FILL,height=20]
+  Button[id="poster_retry",component="translatable:mycinema.panel.poster_retry",width=FILL,height=20]
+ }
+ Text[component=preview,width=FILL,height=42,lines=3,ellipsize=true]
+ Text[component=shape_label,width=FILL,height=16]
+ Text[component="translatable:mycinema.ad.shape_hint",width=FILL,height=56,lines=4]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+  Button[id="shape_apply",component="translatable:mycinema.ad.shape.apply",enabled=shape_editable,width=FILL,height=20]
+  Button[id="shape_clear",component="translatable:mycinema.ad.shape.clear",enabled=editable,width=FILL,height=20]
+ }
+ Text[component=assembly,width=FILL,height=16]
+ Button[id="assemble",component="translatable:mycinema.ad.assemble",enabled=can_assemble,width=FILL,height=20]
+ Text[component=dimensions,width=FILL,height=16]
+ Text[component=step_label,width=FILL,height=14]
+ Button[id="step",component="translatable:mycinema.ad.toggle_step",enabled=editable,width=FILL,height=20]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+  Text[component="translatable:mycinema.ad.left",width=74,height=20]
+  Button[id="left_less",component="translatable:mycinema.ad.shrink",enabled=editable,width=FILL,height=20]
+  Button[id="left_more",component="translatable:mycinema.ad.expand",enabled=editable,width=FILL,height=20]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+  Text[component="translatable:mycinema.ad.right",width=74,height=20]
+  Button[id="right_less",component="translatable:mycinema.ad.shrink",enabled=editable,width=FILL,height=20]
+  Button[id="right_more",component="translatable:mycinema.ad.expand",enabled=editable,width=FILL,height=20]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+  Text[component="translatable:mycinema.ad.top",width=74,height=20]
+  Button[id="top_less",component="translatable:mycinema.ad.shrink",enabled=editable,width=FILL,height=20]
+  Button[id="top_more",component="translatable:mycinema.ad.expand",enabled=editable,width=FILL,height=20]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+  Text[component="translatable:mycinema.ad.bottom",width=74,height=20]
+  Button[id="bottom_less",component="translatable:mycinema.ad.shrink",enabled=editable,width=FILL,height=20]
+  Button[id="bottom_more",component="translatable:mycinema.ad.expand",enabled=editable,width=FILL,height=20]
+ }
+ Text[component="translatable:mycinema.ad.size_hint",width=FILL,height=56,lines=4]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+  Button[id="apply_size",component="translatable:mycinema.ad.apply_size",enabled=editable,width=FILL,height=20]
+  Button[id="reset_size",component="translatable:mycinema.ad.reset_size",enabled=editable,width=FILL,height=20]
+ }
+}
+Text[component=notice,width=FILL,height=32,lines=3,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="reload",component="translatable:mycinema.panel.reload",enabled=can_reload,width=FILL,height=20]
+ Button[id="done",component="translatable:mycinema.ui.done",width=FILL,height=20]
+}

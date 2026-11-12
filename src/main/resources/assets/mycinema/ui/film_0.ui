@@ -1,0 +1,79 @@
+theme "waterframes:waterui"
+var heading
+var notice
+var ready
+var can_reload
+var can_select
+var selected
+var runtime
+var hall
+var has_hall
+var zone
+var page
+var previous_page
+var next_page
+var can_create
+var film_row_0
+var film_row_1
+var film_row_2
+var film_row_3
+var film_row_4
+var film_row_5
+var film_available_0
+var film_available_1
+var film_available_2
+var film_available_3
+var film_available_4
+var film_available_5
+root[frame=EDGE,orientation=VERTICAL,align=STRETCH,spacing=3,padding=6]
+Text[component=heading,width=FILL,height=15,ellipsize=true]
+Parent[id="film_scroll",orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=3,padding=0,border=0] {
+ Text[component="translatable:mycinema.catalog.browse_intro",width=FILL,height=26,lines=2]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="film_row_0",component="1",enabled=film_available_0,width=24,height=26]
+  Text[component=film_row_0,width=FILL,height=26,lines=2,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="film_row_1",component="2",enabled=film_available_1,width=24,height=26]
+  Text[component=film_row_1,width=FILL,height=26,lines=2,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="film_row_2",component="3",enabled=film_available_2,width=24,height=26]
+  Text[component=film_row_2,width=FILL,height=26,lines=2,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="film_row_3",component="4",enabled=film_available_3,width=24,height=26]
+  Text[component=film_row_3,width=FILL,height=26,lines=2,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="film_row_4",component="5",enabled=film_available_4,width=24,height=26]
+  Text[component=film_row_4,width=FILL,height=26,lines=2,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="film_row_5",component="6",enabled=film_available_5,width=24,height=26]
+  Text[component=film_row_5,width=FILL,height=26,lines=2,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="previous_page",component="translatable:mycinema.catalog.previous_page",enabled=previous_page,width=FILL,height=19]
+  Text[component=page,width=95,height=19,ellipsize=true]
+  Button[id="next_page",component="translatable:mycinema.catalog.next_page",enabled=next_page,width=FILL,height=19]
+ }
+ Text[component=selected,width=FILL,height=26,lines=2,ellipsize=true]
+ Text[component=runtime,width=FILL,height=14,ellipsize=true]
+ Button[id="catalog_exchange",component="translatable:mycinema.catalog.exchange_title",enabled=can_create,width=FILL,height=20]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="new_film",component="translatable:mycinema.catalog.new_film",enabled=can_create,width=FILL,height=20]
+  Button[id="edit_film",component="translatable:mycinema.catalog.edit_film",enabled=can_select,width=FILL,height=20]
+  Button[id="delete_film",component="translatable:mycinema.catalog.delete_film",enabled=can_select,width=FILL,height=20]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="prepare_page",component="translatable:mycinema.catalog.sources_length",enabled=has_hall,width=FILL,height=20]
+  Button[id="schedule_page",component="translatable:mycinema.catalog.schedule_film",enabled=can_select,width=FILL,height=20]
+ }
+}
+Text[component=notice,width=FILL,height=32,lines=3,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="browse",component="translatable:mycinema.catalog.library",enabled=ready,width=FILL,height=20]
+ Button[id="reload",component="translatable:mycinema.catalog.reload",enabled=can_reload,width=FILL,height=20]
+ Button[id="done",component="translatable:mycinema.catalog.done",enabled=can_reload,width=FILL,height=20]
+}

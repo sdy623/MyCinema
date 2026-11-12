@@ -1,0 +1,75 @@
+theme "waterframes:waterui"
+var heading
+var emergency_status
+var can_emergency_unlock
+var can_emergency_restore
+var hall_status
+var door_status
+var detail
+var notice
+var zone_status
+var binding
+var preset_name
+var show_status
+var info0
+var info1
+var info2
+var info3
+var info4
+var info5
+var info6
+final var editable
+root[frame=EDGE, orientation=VERTICAL, align=STRETCH, spacing=4, padding=6]
+Text[component=heading, width=FILL, height=14, ellipsize=true]
+Text[id="emergency_status",component=emergency_status,width=FILL,height=15,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="emergency_unlock",component="translatable:mycinema.emergency.unlock",enabled=can_emergency_unlock,width=FILL,height=22]
+ Button[id="emergency_restore",component="translatable:mycinema.emergency.restore",enabled=can_emergency_restore,width=FILL,height=22]
+}
+Parent[orientation=HORIZONTAL, width=FILL, spacing=3] {
+ Button[id="tab0", component="translatable:mycinema.ui.control", enabled=editable, width=FILL, height=19]
+ Button[id="tab1", component="translatable:mycinema.ui.devices", enabled=editable, width=FILL, height=19]
+ Button[id="tab2", component="translatable:mycinema.ui.schedule", enabled=editable, width=FILL, height=19]
+ Button[id="tab4", component="translatable:mycinema.ui.lighting", enabled=editable, width=FILL, height=19]
+ Button[id="tab3", component="translatable:mycinema.ui.information", width=FILL, height=19]
+}
+Parent[orientation=HORIZONTAL, width=FILL, spacing=3] {
+ Button[id="previous", component="<", width=20, height=18]
+ Text[component=hall_status, width=FILL, height=18, ellipsize=true]
+ Button[id="next", component=">", width=20, height=18]
+ Button[id="scope", component="translatable:mycinema.ui.scope", enabled=editable, width=62, height=18]
+}
+Parent[id="manager_body",orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=4,padding=0,border=0] {
+ Text[component="translatable:mycinema.ui.light_warning",width=FILL,height=12]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="preset_entry",component="translatable:mycinema.ui.entry",width=FILL,height=19]
+  Button[id="preset_trailer",component="translatable:mycinema.ui.trailer",width=FILL,height=19]
+  Button[id="preset_feature",component="translatable:mycinema.ui.feature",width=FILL,height=19]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="preset_pause",component="translatable:mycinema.ui.pause",width=FILL,height=19]
+  Button[id="preset_exit",component="translatable:mycinema.ui.exit",width=FILL,height=19]
+  Button[id="preset_cleaning",component="translatable:mycinema.ui.cleaning",width=FILL,height=19]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="preset_previous",component="<",width=20,height=18]
+  Text[component=preset_name,width=FILL,height=18,ellipsize=true]
+  Button[id="preset_next",component=">",width=20,height=18]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=5] {
+  Text[component="translatable:mycinema.ui.main_hint",width=FILL,height=11]
+  Text[component="translatable:mycinema.ui.aisle_hint",width=FILL,height=11]
+  Text[component="translatable:mycinema.ui.exit_hint",width=FILL,height=11]
+  Text[component="translatable:mycinema.ui.accent_hint",width=FILL,height=11]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=5] {
+  InputText[id="light_main",width=FILL,height=18]
+  InputText[id="light_aisle",width=FILL,height=18]
+  InputText[id="light_exit",width=FILL,height=18]
+  InputText[id="light_accent",width=FILL,height=18]
+ }
+ Button[id="preset_save",component="translatable:mycinema.ui.save_preset",width=FILL,height=18]
+ Text[component="translatable:mycinema.ui.redstone_hint",width=FILL,height=12]
+}
+Text[component=notice, width=FILL, height=29, lines=2, ellipsize=true]
+Button[id="done", component="translatable:mycinema.ui.done", width=FILL, height=19]

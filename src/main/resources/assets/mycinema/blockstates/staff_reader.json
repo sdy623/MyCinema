@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mycinema:block/staff_reader"
+    },
+    "facing=east": {
+      "model": "mycinema:block/staff_reader",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mycinema:block/staff_reader",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mycinema:block/staff_reader",
+      "y": 270
+    }
+  }
+}

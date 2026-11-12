@@ -1,0 +1,735 @@
+{
+  "plan_sha256": "a09a704b88a6499b7b46ebd4db5a6456c4f6fb04fd6390433871cafa27390095",
+  "finishes": [
+    {
+      "pos": [
+        18,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        18,
+        81,
+        51
+      ],
+      "base_state": {
+        "Name": "minecraft:white_concrete"
+      }
+    },
+    {
+      "pos": [
+        18,
+        83,
+        54
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        18,
+        82,
+        54
+      ],
+      "base_state": {
+        "Properties": {
+          "axis": "x"
+        },
+        "Name": "minecraft:stripped_spruce_wood"
+      }
+    },
+    {
+      "pos": [
+        19,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        19,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "axis": "x"
+        },
+        "Name": "minecraft:stripped_spruce_wood"
+      }
+    },
+    {
+      "pos": [
+        20,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        20,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "axis": "x"
+        },
+        "Name": "minecraft:stripped_spruce_wood"
+      }
+    },
+    {
+      "pos": [
+        21,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:black_carpet"
+      },
+      "base_pos": [
+        21,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "axis": "x"
+        },
+        "Name": "minecraft:stripped_spruce_wood"
+      }
+    },
+    {
+      "pos": [
+        22,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:black_carpet"
+      },
+      "base_pos": [
+        22,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "axis": "x"
+        },
+        "Name": "minecraft:stripped_spruce_wood"
+      }
+    },
+    {
+      "pos": [
+        23,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        23,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        24,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        24,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        25,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        25,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        26,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        26,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        27,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        27,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        28,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        28,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        29,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        29,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        30,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        30,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        31,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        31,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        32,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        32,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        33,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        33,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        34,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        34,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        35,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        35,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        36,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        36,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        37,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        37,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        38,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        38,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        39,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        39,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        40,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        40,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        41,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        41,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        42,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        42,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        43,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        43,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        44,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        44,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "waterlogged": "false",
+          "type": "top"
+        },
+        "Name": "minecraft:smooth_quartz_slab"
+      }
+    },
+    {
+      "pos": [
+        45,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:black_carpet"
+      },
+      "base_pos": [
+        45,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "axis": "x"
+        },
+        "Name": "minecraft:stripped_spruce_wood"
+      }
+    },
+    {
+      "pos": [
+        46,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:black_carpet"
+      },
+      "base_pos": [
+        46,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "axis": "x"
+        },
+        "Name": "minecraft:stripped_spruce_wood"
+      }
+    },
+    {
+      "pos": [
+        47,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        47,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "axis": "x"
+        },
+        "Name": "minecraft:stripped_spruce_wood"
+      }
+    },
+    {
+      "pos": [
+        48,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        48,
+        81,
+        51
+      ],
+      "base_state": {
+        "Properties": {
+          "axis": "x"
+        },
+        "Name": "minecraft:stripped_spruce_wood"
+      }
+    },
+    {
+      "pos": [
+        49,
+        82,
+        51
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        49,
+        81,
+        51
+      ],
+      "base_state": {
+        "Name": "minecraft:white_concrete"
+      }
+    },
+    {
+      "pos": [
+        49,
+        83,
+        54
+      ],
+      "state": {
+        "Name": "minecraft:gray_carpet"
+      },
+      "base_pos": [
+        49,
+        82,
+        54
+      ],
+      "base_state": {
+        "Properties": {
+          "axis": "x"
+        },
+        "Name": "minecraft:stripped_spruce_wood"
+      }
+    }
+  ]
+}

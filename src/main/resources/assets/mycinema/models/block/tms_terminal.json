@@ -1,0 +1,1073 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "particle": "minecraft:block/light_gray_concrete",
+    "body": "minecraft:block/light_gray_concrete",
+    "trim": "minecraft:block/gray_concrete",
+    "dark": "minecraft:block/black_concrete",
+    "screen": "minecraft:block/blue_concrete",
+    "text": "minecraft:block/light_blue_concrete",
+    "status": "minecraft:block/lime_concrete",
+    "metal": "minecraft:block/iron_block"
+  },
+  "elements": [
+    {
+      "name": "floor cabinet",
+      "from": [
+        0,
+        0,
+        2
+      ],
+      "to": [
+        16,
+        16,
+        15.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#body"
+        },
+        "south": {
+          "texture": "#body"
+        },
+        "east": {
+          "texture": "#body"
+        },
+        "west": {
+          "texture": "#body"
+        },
+        "up": {
+          "texture": "#body"
+        },
+        "down": {
+          "texture": "#body"
+        }
+      }
+    },
+    {
+      "name": "left console rail",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        1,
+        16,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#trim"
+        },
+        "south": {
+          "texture": "#trim"
+        },
+        "east": {
+          "texture": "#trim"
+        },
+        "west": {
+          "texture": "#trim"
+        },
+        "up": {
+          "texture": "#trim"
+        },
+        "down": {
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "right console rail",
+      "from": [
+        15,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#trim"
+        },
+        "south": {
+          "texture": "#trim"
+        },
+        "east": {
+          "texture": "#trim"
+        },
+        "west": {
+          "texture": "#trim"
+        },
+        "up": {
+          "texture": "#trim"
+        },
+        "down": {
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "top console rail",
+      "from": [
+        1,
+        15,
+        0
+      ],
+      "to": [
+        15,
+        16,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#trim"
+        },
+        "south": {
+          "texture": "#trim"
+        },
+        "east": {
+          "texture": "#trim"
+        },
+        "west": {
+          "texture": "#trim"
+        },
+        "up": {
+          "texture": "#trim"
+        },
+        "down": {
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "floor plinth",
+      "from": [
+        1,
+        0,
+        0
+      ],
+      "to": [
+        15,
+        1,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#trim"
+        },
+        "south": {
+          "texture": "#trim"
+        },
+        "east": {
+          "texture": "#trim"
+        },
+        "west": {
+          "texture": "#trim"
+        },
+        "up": {
+          "texture": "#trim"
+        },
+        "down": {
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "screen bezel",
+      "from": [
+        2,
+        8,
+        1
+      ],
+      "to": [
+        14,
+        15,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark"
+        },
+        "south": {
+          "texture": "#dark"
+        },
+        "east": {
+          "texture": "#dark"
+        },
+        "west": {
+          "texture": "#dark"
+        },
+        "up": {
+          "texture": "#dark"
+        },
+        "down": {
+          "texture": "#dark"
+        }
+      }
+    },
+    {
+      "name": "screen surface",
+      "from": [
+        3,
+        9,
+        0.875
+      ],
+      "to": [
+        13,
+        14,
+        1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#screen"
+        },
+        "south": {
+          "texture": "#screen"
+        },
+        "east": {
+          "texture": "#screen"
+        },
+        "west": {
+          "texture": "#screen"
+        },
+        "up": {
+          "texture": "#screen"
+        },
+        "down": {
+          "texture": "#screen"
+        }
+      }
+    },
+    {
+      "name": "screen header",
+      "from": [
+        3.5,
+        12.75,
+        0.75
+      ],
+      "to": [
+        10,
+        13.25,
+        0.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#text"
+        },
+        "south": {
+          "texture": "#text"
+        },
+        "east": {
+          "texture": "#text"
+        },
+        "west": {
+          "texture": "#text"
+        },
+        "up": {
+          "texture": "#text"
+        },
+        "down": {
+          "texture": "#text"
+        }
+      }
+    },
+    {
+      "name": "screen status",
+      "from": [
+        11.5,
+        12.5,
+        0.75
+      ],
+      "to": [
+        12.5,
+        13.5,
+        0.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#status"
+        },
+        "south": {
+          "texture": "#status"
+        },
+        "east": {
+          "texture": "#status"
+        },
+        "west": {
+          "texture": "#status"
+        },
+        "up": {
+          "texture": "#status"
+        },
+        "down": {
+          "texture": "#status"
+        }
+      }
+    },
+    {
+      "name": "screen row one",
+      "from": [
+        3.5,
+        11.25,
+        0.75
+      ],
+      "to": [
+        8.5,
+        11.75,
+        0.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#text"
+        },
+        "south": {
+          "texture": "#text"
+        },
+        "east": {
+          "texture": "#text"
+        },
+        "west": {
+          "texture": "#text"
+        },
+        "up": {
+          "texture": "#text"
+        },
+        "down": {
+          "texture": "#text"
+        }
+      }
+    },
+    {
+      "name": "screen row two",
+      "from": [
+        3.5,
+        9.75,
+        0.75
+      ],
+      "to": [
+        10.5,
+        10.25,
+        0.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#text"
+        },
+        "south": {
+          "texture": "#text"
+        },
+        "east": {
+          "texture": "#text"
+        },
+        "west": {
+          "texture": "#text"
+        },
+        "up": {
+          "texture": "#text"
+        },
+        "down": {
+          "texture": "#text"
+        }
+      }
+    },
+    {
+      "name": "control deck",
+      "from": [
+        2,
+        6,
+        0
+      ],
+      "to": [
+        14,
+        7.75,
+        3
+      ],
+      "faces": {
+        "north": {
+          "texture": "#trim"
+        },
+        "south": {
+          "texture": "#trim"
+        },
+        "east": {
+          "texture": "#trim"
+        },
+        "west": {
+          "texture": "#trim"
+        },
+        "up": {
+          "texture": "#trim"
+        },
+        "down": {
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "keyboard recess",
+      "from": [
+        3,
+        7.75,
+        0.5
+      ],
+      "to": [
+        11,
+        7.875,
+        2.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark"
+        },
+        "south": {
+          "texture": "#dark"
+        },
+        "east": {
+          "texture": "#dark"
+        },
+        "west": {
+          "texture": "#dark"
+        },
+        "up": {
+          "texture": "#dark"
+        },
+        "down": {
+          "texture": "#dark"
+        }
+      }
+    },
+    {
+      "name": "control indicator",
+      "from": [
+        12,
+        7.75,
+        1
+      ],
+      "to": [
+        13,
+        8,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#status"
+        },
+        "south": {
+          "texture": "#status"
+        },
+        "east": {
+          "texture": "#status"
+        },
+        "west": {
+          "texture": "#status"
+        },
+        "up": {
+          "texture": "#status"
+        },
+        "down": {
+          "texture": "#status"
+        }
+      }
+    },
+    {
+      "name": "lower access door",
+      "from": [
+        2,
+        1,
+        1.75
+      ],
+      "to": [
+        14,
+        5.5,
+        2
+      ],
+      "faces": {
+        "north": {
+          "texture": "#trim"
+        },
+        "south": {
+          "texture": "#trim"
+        },
+        "east": {
+          "texture": "#trim"
+        },
+        "west": {
+          "texture": "#trim"
+        },
+        "up": {
+          "texture": "#trim"
+        },
+        "down": {
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "access latch",
+      "from": [
+        12,
+        3,
+        1.5
+      ],
+      "to": [
+        13,
+        4.5,
+        1.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "rear service panel",
+      "from": [
+        2,
+        2,
+        15.75
+      ],
+      "to": [
+        14,
+        14,
+        15.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#trim"
+        },
+        "south": {
+          "texture": "#trim"
+        },
+        "east": {
+          "texture": "#trim"
+        },
+        "west": {
+          "texture": "#trim"
+        },
+        "up": {
+          "texture": "#trim"
+        },
+        "down": {
+          "texture": "#trim"
+        }
+      }
+    },
+    {
+      "name": "rear ventilation inset",
+      "from": [
+        3,
+        3,
+        15.875
+      ],
+      "to": [
+        13,
+        7,
+        15.9375
+      ],
+      "faces": {
+        "north": {
+          "texture": "#dark"
+        },
+        "south": {
+          "texture": "#dark"
+        },
+        "east": {
+          "texture": "#dark"
+        },
+        "west": {
+          "texture": "#dark"
+        },
+        "up": {
+          "texture": "#dark"
+        },
+        "down": {
+          "texture": "#dark"
+        }
+      }
+    },
+    {
+      "name": "keyboard key",
+      "from": [
+        3.5,
+        7.875,
+        0.75
+      ],
+      "to": [
+        4.25,
+        8,
+        1.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "keyboard key",
+      "from": [
+        3.5,
+        7.875,
+        1.75
+      ],
+      "to": [
+        4.25,
+        8,
+        2.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "keyboard key",
+      "from": [
+        5,
+        7.875,
+        0.75
+      ],
+      "to": [
+        5.75,
+        8,
+        1.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "keyboard key",
+      "from": [
+        5,
+        7.875,
+        1.75
+      ],
+      "to": [
+        5.75,
+        8,
+        2.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "keyboard key",
+      "from": [
+        6.5,
+        7.875,
+        0.75
+      ],
+      "to": [
+        7.25,
+        8,
+        1.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "keyboard key",
+      "from": [
+        6.5,
+        7.875,
+        1.75
+      ],
+      "to": [
+        7.25,
+        8,
+        2.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "keyboard key",
+      "from": [
+        8,
+        7.875,
+        0.75
+      ],
+      "to": [
+        8.75,
+        8,
+        1.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "keyboard key",
+      "from": [
+        8,
+        7.875,
+        1.75
+      ],
+      "to": [
+        8.75,
+        8,
+        2.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "keyboard key",
+      "from": [
+        9.5,
+        7.875,
+        0.75
+      ],
+      "to": [
+        10.25,
+        8,
+        1.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "keyboard key",
+      "from": [
+        9.5,
+        7.875,
+        1.75
+      ],
+      "to": [
+        10.25,
+        8,
+        2.25
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "rear ventilation louver",
+      "from": [
+        3,
+        3.5,
+        15.9375
+      ],
+      "to": [
+        13,
+        3.75,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#body"
+        },
+        "south": {
+          "texture": "#body"
+        },
+        "east": {
+          "texture": "#body"
+        },
+        "west": {
+          "texture": "#body"
+        },
+        "up": {
+          "texture": "#body"
+        },
+        "down": {
+          "texture": "#body"
+        }
+      }
+    },
+    {
+      "name": "rear ventilation louver",
+      "from": [
+        3,
+        4.5,
+        15.9375
+      ],
+      "to": [
+        13,
+        4.75,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#body"
+        },
+        "south": {
+          "texture": "#body"
+        },
+        "east": {
+          "texture": "#body"
+        },
+        "west": {
+          "texture": "#body"
+        },
+        "up": {
+          "texture": "#body"
+        },
+        "down": {
+          "texture": "#body"
+        }
+      }
+    },
+    {
+      "name": "rear ventilation louver",
+      "from": [
+        3,
+        5.5,
+        15.9375
+      ],
+      "to": [
+        13,
+        5.75,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#body"
+        },
+        "south": {
+          "texture": "#body"
+        },
+        "east": {
+          "texture": "#body"
+        },
+        "west": {
+          "texture": "#body"
+        },
+        "up": {
+          "texture": "#body"
+        },
+        "down": {
+          "texture": "#body"
+        }
+      }
+    },
+    {
+      "name": "rear ventilation louver",
+      "from": [
+        3,
+        6.5,
+        15.9375
+      ],
+      "to": [
+        13,
+        6.75,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#body"
+        },
+        "south": {
+          "texture": "#body"
+        },
+        "east": {
+          "texture": "#body"
+        },
+        "west": {
+          "texture": "#body"
+        },
+        "up": {
+          "texture": "#body"
+        },
+        "down": {
+          "texture": "#body"
+        }
+      }
+    }
+  ],
+  "credit": "MyCinema TMS terminal cabinet, migrated from the user-owned private release"
+}

@@ -1,0 +1,6 @@
+{
+  "type":"minecraft:crafting_shapeless",
+  "category":"misc",
+  "ingredients":[{"item":"minecraft:paper"},{"item":"minecraft:amethyst_shard"},{"item":"minecraft:redstone"}],
+  "result":{"id":"mycinema:display_linking_card","count":1}
+}

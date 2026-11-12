@@ -1,0 +1,40 @@
+theme "waterframes:waterui"
+var heading
+var editable
+var can_reload
+var notice
+var preview
+var layout
+var poster_layout_hint
+var binding_status
+var schedule_status
+root[frame=EDGE,orientation=VERTICAL,align=STRETCH,spacing=4,padding=7]
+Text[component=heading,width=FILL,height=16,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="tab0",component="translatable:mycinema.panel.tab_text",width=FILL,height=20]
+ Button[id="tab1",component="translatable:mycinema.panel.tab_layout",width=FILL,height=20]
+ Button[id="tab2",component="translatable:mycinema.panel.tab_poster",width=FILL,height=20]
+}
+Parent[orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=4,padding=0,border=0] {
+ Text[component="translatable:mycinema.panel.poster_edit",width=FILL,height=12]
+ InputText[id="poster",enabled=editable,width=FILL,height=19]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+  Button[id="choose_local",component="translatable:mycinema.picture.local_button",enabled=editable,width=FILL,height=20]
+  Button[id="upload_picture",component="translatable:mycinema.picture.upload_button",enabled=editable,width=FILL,height=20]
+ }
+ Text[component="translatable:mycinema.panel.poster_hint",width=FILL,height=42,lines=3]
+ Text[component=poster_layout_hint,width=FILL,height=36,lines=3]
+ Text[component="translatable:mycinema.panel.poster_auto_hint",width=FILL,height=56,lines=4]
+ Text[component=binding_status,width=FILL,height=26,lines=2]
+ Text[component=schedule_status,width=FILL,height=36,lines=3]
+ Text[component="translatable:mycinema.panel.poster_limits",width=FILL,height=56,lines=4]
+ Text[component="translatable:mycinema.panel.poster_saved_status",width=FILL,height=15]
+ Text[component=preview,width=FILL,height=42,lines=3,ellipsize=true]
+ Button[id="poster_retry",component="translatable:mycinema.panel.poster_retry",width=FILL,height=20]
+}
+Text[component=notice,width=FILL,height=32,lines=3,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="save",component="translatable:mycinema.panel.save",enabled=editable,width=FILL,height=20]
+ Button[id="reload",component="translatable:mycinema.panel.reload",enabled=can_reload,width=FILL,height=20]
+ Button[id="done",component="translatable:mycinema.ui.done",width=FILL,height=20]
+}

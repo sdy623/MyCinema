@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mycinema:block/led_advertising_panel"
+    }
+  }
+}

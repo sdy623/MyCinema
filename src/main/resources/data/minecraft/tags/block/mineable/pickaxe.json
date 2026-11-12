@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "mycinema:gray_wool_slab",
+    "mycinema:black_wool_slab",
+    "mycinema:gray_wool_stairs",
+    "mycinema:black_wool_stairs",
+    "mycinema:black_wool_deepslate_stairs",
+    "mycinema:gray_wool_half_depth_slab",
+    "mycinema:black_wool_half_depth_slab"
+  ]
+}

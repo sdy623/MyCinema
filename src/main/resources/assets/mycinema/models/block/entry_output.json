@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "minecraft:block/green_concrete",
+    "down": "minecraft:block/green_concrete",
+    "up": "minecraft:block/redstone_block",
+    "north": "minecraft:block/green_concrete",
+    "south": "minecraft:block/green_concrete",
+    "east": "minecraft:block/green_concrete",
+    "west": "minecraft:block/green_concrete"
+  }
+}

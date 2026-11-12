@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mycinema:block/cinema_seat_double_support",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "mycinema:block/cinema_seat_double_support",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mycinema:block/cinema_seat_double_support",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mycinema:block/cinema_seat_double_support",
+      "y": 270
+    }
+  }
+}

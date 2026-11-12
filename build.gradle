@@ -1,0 +1,226 @@
+plugins { id 'java'; id 'net.neoforged.moddev' version '2.0.142' }
+version='0.1.0'
+group='io.github.sdy623.mycinema'
+base.archivesName='mycinema-neoforge-1.21.1'
+java.toolchain.languageVersion=JavaLanguageVersion.of(21)
+neoForge {
+ version='21.1.244'
+ runs {
+  client { client(); systemProperty 'mycinema.qa','true' }
+  server { server(); programArgument '--nogui' }
+  gameTestServer { gameDirectory = file('run/library11-qa'); type='gameTestServer'; systemProperty 'mycinema.qa','true'; systemProperty 'neoforge.enabledGameTestNamespaces','mycinema,mycinema_cb_backend' }
+  clientQa {
+   client(); gameDirectory=file('run/client-qa')
+   systemProperty 'mycinema.qa','true'; systemProperty 'mycinema.clientQa','true'
+   systemProperty 'mycinema.qaMedia','http://127.0.0.1:38471/mycinema-qa.mp4'
+   systemProperty 'mycinema.qaMediaFile',file('build/qa-media/mycinema-qa.mp4').absolutePath
+  }
+  serverQaFirst {
+   server(); gameDirectory=file('run/server-qa'); programArgument '--nogui'
+   systemProperty 'mycinema.dedicatedQa','true'; systemProperty 'mycinema.dedicatedQaPhase','1'
+   systemProperty 'mycinema.qaResultDirectory',file('build/release-evidence/dedicated').absolutePath
+  }
+  serverQaReload {
+   server(); gameDirectory=file('run/server-qa'); programArgument '--nogui'
+   systemProperty 'mycinema.dedicatedQa','true'; systemProperty 'mycinema.dedicatedQaPhase','2'
+   systemProperty 'mycinema.qaResultDirectory',file('build/release-evidence/dedicated').absolutePath
+  }
+ }
+ mods { mycinema { sourceSet sourceSets.main } }
+}
+repositories {
+ mavenCentral()
+ maven { url='https://maven.neoforged.net/releases' }
+ maven { url='https://maven.createmod.net' }
+ exclusiveContent {
+  forRepository { maven { name='Modrinth'; url='https://api.modrinth.com/maven' } }
+  filter { includeGroup 'maven.modrinth' }
+ }
+}
+dependencies {
+ // External, unmodified upstream artifacts. Never embed or publish these jars with MyCinema.
+ implementation 'net.createmod.ponder:ponder-neoforge:1.0.87+mc1.21.1'
+ implementation 'maven.modrinth:eBzFuVTM:3q7i6sG3' // WaterFrames 3.0.0-alpha.1, NeoForge 1.21.1
+ implementation 'maven.modrinth:G922NeHS:7aLfBD61' // WaterMedia 3.0.0
+ runtimeOnly 'maven.modrinth:4997XcoK:IvgVb1Pv' // WaterMedia Binaries 3.0.0
+}
+sourceSets { modelTest { java.srcDir 'src/test/java'; compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath; runtimeClasspath += output + compileClasspath } }
+tasks.register('modelChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.ManagerChecks'; maxHeapSize='256m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.named('check') { dependsOn tasks.named('modelChecks') }
+tasks.withType(JavaCompile).configureEach { options.encoding='UTF-8'; options.compilerArgs.addAll('-proc:none','-Xmaxerrs','1000') }
+// Checks live in the explicit modelTest source set, with the mapped Minecraft API classpath.
+sourceSets.test.java.setSrcDirs([])
+tasks.named('runGameTestServer') { maxHeapSize='768m'; jvmArgs '-XX:ActiveProcessorCount=2', '-XX:MaxDirectMemorySize=128m' }
+def pythonExecutable=providers.environmentVariable('PYTHON').orElse(System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')?'python':'python3')
+tasks.register('verifyGameTestInventory',Exec) {
+ commandLine pythonExecutable.get(),'tools/check_gametest_inventory.py'
+}
+tasks.register('verifyTooling',Exec) {
+ commandLine pythonExecutable.get(),'-m','unittest','discover','-s','tools/tests','-v'
+}
+tasks.register('verifyPonderStructures',Exec) {
+ commandLine pythonExecutable.get(),'tools/generate_ponder_structures.py','--check'
+}
+tasks.register('cinemaProgrammeChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.theater.CinemaProgrammeChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=1' }
+tasks.register('cinemaProgrammeNbtChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.theater.CinemaProgrammeNbtChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=1' }
+tasks.register('cinemaProgrammeUiChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.theater.CinemaProgrammeUiChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=1' }
+for (def entry : [mediaSourceChecks:'media.MediaSourceChecks',cinemaSourceEvidenceChecks:'media.CinemaSourceEvidenceChecks',cinemaSourcesChecks:'media.CinemaSourcesChecks',cinemaPermissionsChecks:'policy.CinemaPermissionsChecks',cinemaAutomationChecks:'automation.CinemaAutomationChecks']) {
+ tasks.register(entry.key,JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.'+entry.value; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=1' }
+}
+tasks.named('check') { dependsOn tasks.named('verifyGameTestInventory'),tasks.named('verifyTooling'),tasks.named('verifyPonderStructures'),tasks.named('cinemaProgrammeChecks'),tasks.named('cinemaProgrammeNbtChecks'),tasks.named('cinemaProgrammeUiChecks'),tasks.named('mediaSourceChecks'),tasks.named('cinemaSourceEvidenceChecks'),tasks.named('cinemaSourcesChecks'),tasks.named('cinemaPermissionsChecks'),tasks.named('cinemaAutomationChecks') }
+tasks.named('runGameTestServer') { systemProperty 'mycinema.doorQaDirectory', file('validation/panels10-door-light').absolutePath }
+
+tasks.register('prepareQaMedia',Exec) {
+ def target=file('build/qa-media/mycinema-qa.mp4')
+ outputs.file(target)
+ doFirst { target.parentFile.mkdirs() }
+ commandLine providers.environmentVariable('FFMPEG').orElse('ffmpeg').get(),'-hide_banner','-loglevel','error','-y',
+  '-f','lavfi','-i','testsrc2=size=640x360:rate=30',
+  '-f','lavfi','-i','sine=frequency=880:sample_rate=48000',
+  '-t','8','-c:v','libx264','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-movflags','+faststart',target.absolutePath
+}
+tasks.register('prepareClientQaProfile',Delete) {
+ delete file('run/client-qa')
+ delete file('build/release-evidence/client')
+}
+tasks.named('runClientQa') {
+ dependsOn tasks.named('prepareQaMedia'),tasks.named('prepareClientQaProfile')
+ maxHeapSize='1536m'; jvmArgs '-XX:ActiveProcessorCount=4','-XX:MaxDirectMemorySize=512m'
+}
+tasks.register('verifyClientQa') {
+ dependsOn tasks.named('runClientQa')
+ doLast {
+  def source=file('run/client-qa/mycinema-client-qa-results.json')
+  if(!source.isFile())throw new GradleException('Client QA result is missing')
+  def result=new groovy.json.JsonSlurper().parse(source)
+  if(result.success!=true)throw new GradleException('Client/media QA failed: '+result.error)
+  def target=file('build/release-evidence/client');target.mkdirs()
+  copy { from source; from fileTree('run/client-qa/screenshots'){include 'mycinema-qa-*.png'}; into target }
+ }
+}
+
+tasks.register('prepareDedicatedQaProfile',Delete) {
+ delete file('run/server-qa'); delete file('build/release-evidence/dedicated')
+ doLast {
+  def dir=file('run/server-qa');dir.mkdirs()
+  file('run/server-qa/eula.txt').text='eula=true\n'
+  file('run/server-qa/server.properties').text='level-name=world\nonline-mode=false\nmax-tick-time=60000\nview-distance=5\nsimulation-distance=5\nspawn-protection=0\n'
+ }
+}
+tasks.named('runServerQaFirst') { dependsOn tasks.named('prepareDedicatedQaProfile'); maxHeapSize='1024m'; jvmArgs '-XX:ActiveProcessorCount=2','-XX:MaxDirectMemorySize=256m' }
+tasks.named('runServerQaReload') { mustRunAfter tasks.named('runServerQaFirst'); maxHeapSize='1024m'; jvmArgs '-XX:ActiveProcessorCount=2','-XX:MaxDirectMemorySize=256m' }
+tasks.register('verifyDedicatedServerQa') {
+ dependsOn tasks.named('runServerQaFirst'),tasks.named('runServerQaReload')
+ doLast {
+  for(int phase in [1,2]){
+   def source=file("build/release-evidence/dedicated/mycinema-dedicated-qa-phase-${phase}.json")
+   if(!source.isFile())throw new GradleException("Dedicated-server QA phase ${phase} result is missing")
+   def result=new groovy.json.JsonSlurper().parse(source)
+   if(result.success!=true)throw new GradleException("Dedicated-server QA phase ${phase} failed: "+result.error)
+  }
+ }
+}
+tasks.register('staffAccessChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.StaffAccessChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.named('check') { dependsOn tasks.named('staffAccessChecks') }
+sourceSets.modelTest.java.srcDir 'door-tools/tests'
+tasks.register('doorGeometryChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.doors.DoorGeometryChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.named('check') { dependsOn tasks.named('doorGeometryChecks') }
+
+tasks.register('seekChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.SeekChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.named('check') { dependsOn tasks.named('seekChecks') }
+tasks.register('manualChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.ManualChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.named('check') { dependsOn tasks.named('manualChecks') }
+tasks.register('ponderTutorialChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.ponder.PonderTutorialChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=1' }
+tasks.named('check') { dependsOn tasks.named('ponderTutorialChecks') }
+
+tasks.register('panelChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.PanelChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.register('posterChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath + sourceSets.main.runtimeClasspath; mainClass='local.cinemamanager.client.PosterImagesChecks'; maxHeapSize='384m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.named('check') { dependsOn tasks.named('panelChecks'), tasks.named('posterChecks') }
+
+tasks.register('scheduleChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.ScheduleChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.named('check') { dependsOn tasks.named('scheduleChecks') }
+
+tasks.register('posterDecoderChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath + sourceSets.main.runtimeClasspath; mainClass='local.cinemamanager.client.PosterDecoderChecks'; maxHeapSize='256m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.register('posterTransportChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.client.PosterHttpTransportChecks'; args '--loopback'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.named('check') { dependsOn tasks.named('posterDecoderChecks'),tasks.named('posterTransportChecks') }
+
+tasks.register('posterLifecycleChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.client.PosterLifecycleChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.named('check') { dependsOn tasks.named('posterLifecycleChecks') }
+
+tasks.register('scheduleDisplayChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.ScheduleDisplayChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=2' }
+tasks.named('check') { dependsOn tasks.named('scheduleDisplayChecks') }
+
+// Optional portable setup for the single-JVM compiler when the original shared cache is absent.
+tasks.register('exportLowMemoryCompileClasspath') {
+ dependsOn sourceSets.main.compileClasspath
+ doLast {
+  def target=file('build/low-memory/exported-compile-classpath.txt')
+  target.parentFile.mkdirs()
+  target.text=sourceSets.main.compileClasspath.asPath
+ }
+}
+
+tasks.register("panelGeometryChecks",JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass="local.cinemamanager.PanelGeometryChecks"; maxHeapSize="128m"; jvmArgs "-XX:ActiveProcessorCount=2" }
+tasks.register("assetStoreChecks",JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass="local.cinemamanager.panels.assets.AssetStoreChecks"; maxHeapSize="128m"; jvmArgs "-XX:ActiveProcessorCount=2" }
+tasks.register("assetNetworkChecks",JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass="local.cinemamanager.panels.assets.AssetNetworkChecks"; maxHeapSize="128m"; jvmArgs "-XX:ActiveProcessorCount=2" }
+tasks.named("check") { dependsOn tasks.named("panelGeometryChecks"),tasks.named("assetStoreChecks"),tasks.named("assetNetworkChecks") }
+
+tasks.register("advertisingGeometryChecks",JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass="local.cinemamanager.AdvertisingGeometryChecks"; maxHeapSize="128m"; jvmArgs "-XX:ActiveProcessorCount=2" }
+tasks.named("check") { dependsOn tasks.named("advertisingGeometryChecks") }
+
+tasks.register("assetClientIoChecks",JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass="local.cinemamanager.client.PanelAssetClientIoChecks"; maxHeapSize="128m"; jvmArgs "-XX:ActiveProcessorCount=2" }
+tasks.named("check") { dependsOn tasks.named("assetClientIoChecks") }
+
+// Source and programme models remain independently runnable alongside the loaded-world checks.
+for (def entry : [filmCatalogChecks:'catalog.FilmCatalogChecks',filmProgramChecks:'library.FilmProgramStateChecks',filmScheduleChecks:'library.FilmScheduleChecks']) {
+ tasks.register(entry.key,JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.'+entry.value; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=1' }
+ tasks.named('check') { dependsOn tasks.named(entry.key) }
+}
+
+// Exact display-only poster selection regression.
+tasks.register("filmPosterSelectionChecks",JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass="local.cinemamanager.catalog.FilmPosterSelectionChecks"; maxHeapSize="128m"; jvmArgs "-XX:ActiveProcessorCount=2" }
+tasks.named("check") { dependsOn tasks.named("filmPosterSelectionChecks") }
+
+// Completed-programme Stop availability keeps authority guards.
+tasks.register("programmeStopPolicyChecks",JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass="local.cinemamanager.client.ProgrammeStopPolicyChecks"; maxHeapSize="128m"; jvmArgs "-XX:ActiveProcessorCount=2" }
+tasks.named("check") { dependsOn tasks.named("programmeStopPolicyChecks") }
+// Cinema-scoped emergency override model; no world or media process required.
+tasks.register('emergencyAccessChecks',JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.EmergencyAccessChecks'; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=1' }
+tasks.named('check') { dependsOn tasks.named('emergencyAccessChecks') }
+
+for (def entry : [catalogExchangeChecks:'catalog.CatalogExchangeChecks',exchangeIngressChecks:'library.ExchangeIngressChecks',operationsPolicyChecks:'operations.OperationsPolicyChecks',operationsSessionChecks:'operations.OperationsSessionChecks',operationsProjectionChecks:'operations.OperationsProjectionChecks']) {
+ tasks.register(entry.key,JavaExec) { dependsOn compileModelTestJava; classpath=sourceSets.modelTest.runtimeClasspath; mainClass='local.cinemamanager.'+entry.value; maxHeapSize='128m'; jvmArgs '-XX:ActiveProcessorCount=1' }
+ tasks.named('check') { dependsOn tasks.named(entry.key) }
+}
+
+// Release JAR metadata.
+tasks.named('jar') {
+ from(rootProject.files('LICENSE','NOTICE','THIRD_PARTY.md')) { into 'META-INF' }
+ manifest {
+  from('release/MANIFEST.MF')
+  attributes('Implementation-Title': 'MyCinema', 'Implementation-Version': project.version.toString())
+ }
+}
+
+tasks.register('verifyGameTestRun',Exec) {
+ dependsOn tasks.named('runGameTestServer')
+ commandLine pythonExecutable.get(),'tools/check_gametest_run.py','run/library11-qa/logs/latest.log','--expected','241','--json','build/release-evidence/gametest/result.json'
+}
+tasks.register('verifyReleaseCompliance',Exec) {
+ dependsOn tasks.named('jar')
+ doFirst {
+  def artifact=tasks.named('jar').get().archiveFile.get().asFile
+  commandLine pythonExecutable.get(),'tools/check_release_compliance.py',artifact.absolutePath
+ }
+}
+
+tasks.named('verifyGameTestRun') { mustRunAfter tasks.named('check') }
+tasks.named('verifyDedicatedServerQa') { mustRunAfter tasks.named('verifyGameTestRun') }
+tasks.named('verifyClientQa') { mustRunAfter tasks.named('verifyDedicatedServerQa') }
+tasks.named('verifyReleaseCompliance') { mustRunAfter tasks.named('verifyClientQa') }
+
+tasks.register('verifyRelease') {
+ group='verification'
+ description='Runs source/model checks, all reviewed GameTests, two-boot dedicated-server QA, native client/movie QA, and final JAR compliance.'
+ dependsOn tasks.named('check'),tasks.named('verifyGameTestRun'),tasks.named('verifyDedicatedServerQa'),tasks.named('verifyClientQa'),tasks.named('verifyReleaseCompliance')
+}

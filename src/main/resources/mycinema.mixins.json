@@ -1,0 +1,8 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "local.cinemamanager.access.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["FixedIronDoorPowerMixin", "BlockItemPlacementMixin", "DisplayBlockEntityMixin", "DisplayDataGuardMixin", "DisplayNetworkGuardMixin", "DisplayMirrorStateMixin", "MediaPlayerPauseSyncMixin"],
+  "injectors": {"defaultRequire": 1}
+}

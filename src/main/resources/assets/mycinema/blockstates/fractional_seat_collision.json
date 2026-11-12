@@ -1,0 +1,70 @@
+{
+  "variants": {
+    "host_material=deepslate,host_slab=false": {
+      "model": "mycinema:block/fractional_seat_collision_empty"
+    },
+    "host_material=deepslate,host_slab=true": {
+      "model": "minecraft:block/polished_deepslate_slab"
+    },
+    "host_material=andesite,host_slab=false": {
+      "model": "mycinema:block/fractional_seat_collision_empty"
+    },
+    "host_material=andesite,host_slab=true": {
+      "model": "minecraft:block/polished_andesite_slab"
+    },
+    "host_material=gray_wool_slab,host_slab=false": {
+      "model": "mycinema:block/fractional_seat_collision_empty"
+    },
+    "host_material=gray_wool_slab,host_slab=true": {
+      "model": "mycinema:block/gray_wool_slab"
+    },
+    "host_material=black_wool_slab,host_slab=false": {
+      "model": "mycinema:block/fractional_seat_collision_empty"
+    },
+    "host_material=black_wool_slab,host_slab=true": {
+      "model": "mycinema:block/black_wool_slab"
+    },
+    "host_material=gray_wool_half_depth_south,host_slab=false": {
+      "model": "mycinema:block/fractional_seat_collision_empty"
+    },
+    "host_material=gray_wool_half_depth_south,host_slab=true": {
+      "model": "mycinema:block/gray_wool_half_depth_slab"
+    },
+    "host_material=black_wool_half_depth_south,host_slab=false": {
+      "model": "mycinema:block/fractional_seat_collision_empty"
+    },
+    "host_material=black_wool_half_depth_south,host_slab=true": {
+      "model": "mycinema:block/black_wool_half_depth_slab"
+    },
+    "host_material=gray_wool_stairs_south,host_slab=false": {
+      "model": "mycinema:block/fractional_seat_collision_empty"
+    },
+    "host_material=gray_wool_stairs_south,host_slab=true": {
+      "model": "mycinema:block/gray_wool_stairs",
+      "uvlock": true,
+      "y": 90
+    },
+    "host_material=black_wool_stairs_south,host_slab=false": {
+      "model": "mycinema:block/fractional_seat_collision_empty"
+    },
+    "host_material=black_wool_stairs_south,host_slab=true": {
+      "model": "mycinema:block/black_wool_stairs",
+      "uvlock": true,
+      "y": 90
+    },
+    "host_material=black_wool_deepslate_stairs_south,host_slab=false": {
+      "model": "mycinema:block/fractional_seat_collision_empty"
+    },
+    "host_material=black_wool_deepslate_stairs_south,host_slab=true": {
+      "model": "mycinema:block/black_wool_stairs",
+      "uvlock": true,
+      "y": 90
+    },
+    "host_material=gray_carpet,host_slab=false": {
+      "model": "mycinema:block/fractional_seat_collision_empty"
+    },
+    "host_material=gray_carpet,host_slab=true": {
+      "model": "mycinema:block/fractional_seat_collision_gray_carpet"
+    }
+  }
+}

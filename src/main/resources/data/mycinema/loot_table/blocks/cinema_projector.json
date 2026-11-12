@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:block",
+  "pools": [{
+    "rolls": 1,
+    "entries": [{ "type": "minecraft:item", "name": "mycinema:cinema_projector" }],
+    "conditions": [{ "condition": "minecraft:survives_explosion" }]
+  }]
+}

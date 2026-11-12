@@ -1,0 +1,72 @@
+theme "waterframes:waterui"
+var heading
+var notice
+var ready
+var can_reload
+var can_select
+var selected
+var runtime
+var hall
+var has_hall
+var zone
+var source_selected
+var source_text
+var metadata
+var source_previous
+var source_next
+var can_prepare
+var can_load_programme
+var can_authorize_programme
+var can_authorize_local_programme
+var can_revoke_local_programme
+var can_claim_unowned_hall
+var hall_authority
+var local_consent_state
+var claim_state
+var programme_state
+root[frame=EDGE,orientation=VERTICAL,align=STRETCH,spacing=3,padding=6]
+Text[component=heading,width=FILL,height=15,ellipsize=true]
+Parent[id="film_scroll",orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=4,padding=0,border=0] {
+ Text[component=selected,width=FILL,height=26,lines=2,ellipsize=true]
+ Text[component=runtime,width=FILL,height=14,ellipsize=true]
+ Text[component="translatable:mycinema.catalog.preparation_hall",width=FILL,height=13]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="hall_previous",component="<",enabled=has_hall,width=24,height=20]
+  Text[component=hall,width=FILL,height=20,ellipsize=true]
+  Button[id="hall_next",component=">",enabled=has_hall,width=24,height=20]
+ }
+ Text[component=hall_authority,width=FILL,height=52,lines=4]
+ Text[component=claim_state,width=FILL,height=42,lines=3]
+ Button[id="claim_unowned_hall",component="translatable:mycinema.catalog.claim_unowned_hall",enabled=can_claim_unowned_hall,width=FILL,height=20]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="source_previous",component="<",enabled=source_previous,width=24,height=20]
+  Text[component=source_selected,width=FILL,height=20,ellipsize=true]
+  Button[id="source_next",component=">",enabled=source_next,width=24,height=20]
+ }
+ Text[component=source_text,width=FILL,height=42,lines=3,ellipsize=true]
+ Text[component=metadata,width=FILL,height=26,lines=2,ellipsize=true]
+ Text[component="translatable:mycinema.catalog.prepare_impact",width=FILL,height=42,lines=3]
+ Button[id="prepare_all",component="translatable:mycinema.catalog.prepare_all",enabled=can_prepare,width=FILL,height=20]
+ Text[component="translatable:mycinema.catalog.prepare_all_hint",width=FILL,height=42,lines=4]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="prepare_source",component="translatable:mycinema.catalog.prepare_source",enabled=can_prepare,width=FILL,height=20]
+  Button[id="read_length",component="translatable:mycinema.catalog.read_length",enabled=can_prepare,width=FILL,height=20]
+ }
+ Text[component="translatable:mycinema.catalog.read_hint",width=FILL,height=42,lines=3]
+ Text[component="translatable:mycinema.catalog.evidence_hint",width=FILL,height=52,lines=5]
+ Text[component=programme_state,width=FILL,height=42,lines=3]
+ Button[id="auth_programme",component="translatable:mycinema.catalog.authorize_programme",enabled=can_authorize_programme,width=FILL,height=20]
+ Text[component="translatable:mycinema.catalog.local_programme_hint",width=FILL,height=78,lines=8]
+ Text[component=local_consent_state,width=FILL,height=42,lines=3]
+ Button[id="auth_local_programme",component="translatable:mycinema.catalog.authorize_local_programme",enabled=can_authorize_local_programme,width=FILL,height=20]
+ Button[id="revoke_local_programme",component="translatable:mycinema.catalog.revoke_local_programme",enabled=can_revoke_local_programme,width=FILL,height=20]
+ Button[id="load_programme",component="translatable:mycinema.catalog.load_programme",enabled=can_load_programme,width=FILL,height=20]
+ Button[id="hall_controls",component="translatable:mycinema.catalog.hall_controls",enabled=has_hall,width=FILL,height=20]
+ Button[id="schedule_page",component="translatable:mycinema.catalog.schedule_film",enabled=can_select,width=FILL,height=20]
+}
+Text[component=notice,width=FILL,height=32,lines=3,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="browse",component="translatable:mycinema.catalog.library",enabled=ready,width=FILL,height=20]
+ Button[id="reload",component="translatable:mycinema.catalog.reload",enabled=can_reload,width=FILL,height=20]
+ Button[id="done",component="translatable:mycinema.catalog.done",enabled=can_reload,width=FILL,height=20]
+}

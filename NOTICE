@@ -1,0 +1,22 @@
+MyCinema
+Copyright 2026 MyCinema contributors
+
+MyCinema is an independent project and is not affiliated with or endorsed by
+Mojang Studios, Microsoft, NeoForge, WaterFrames, WaterUI, WaterMedia, Ponder,
+Flywheel, Iris, or Sodium.
+
+The MyCinema name and logo identify this project. The Apache License 2.0 does
+not grant trademark rights.
+
+The original R4 KUMO cinema-seat model and its nine associated textures were
+authored and are controlled by sdy623.
+
+The Cinema Projector and IMAX GT Projector cabinet models, inventory
+presentation, and the nine IMAX GT cabinet textures were authored and are
+controlled by sdy623.
+
+Third-party dependencies are not part of this distribution. They retain their
+own copyright notices and license terms; see THIRD_PARTY.md.
+
+The historical private WaterFrames and WaterMedia fork binaries are explicitly
+excluded from this repository and from every MyCinema release.

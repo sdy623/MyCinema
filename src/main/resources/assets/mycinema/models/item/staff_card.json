@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mycinema:item/staff_card_blank"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "mycinema:card_state": 1
+      },
+      "model": "mycinema:item/staff_card_entry"
+    },
+    {
+      "predicate": {
+        "mycinema:card_state": 2
+      },
+      "model": "mycinema:item/staff_card_service"
+    },
+    {
+      "predicate": {
+        "mycinema:card_state": 3
+      },
+      "model": "mycinema:item/staff_card_written"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+theme "waterframes:waterui"
+var heading
+var notice
+var ready
+var can_reload
+var can_select
+var selected
+var runtime
+var hall
+var has_hall
+var zone
+var schedule_editable
+var schedule_ready
+var replace_ready
+var reschedule_ready
+var schedule_state
+var plan
+var plan_available
+root[frame=EDGE,orientation=VERTICAL,align=STRETCH,spacing=3,padding=6]
+Text[component=heading,width=FILL,height=15,ellipsize=true]
+Parent[id="film_scroll",orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=4,padding=0,border=0] {
+ Text[component=selected,width=FILL,height=26,lines=2,ellipsize=true]
+ Text[component=runtime,width=FILL,height=14,ellipsize=true]
+ Text[component=zone,width=FILL,height=14,ellipsize=true]
+ Text[component="translatable:mycinema.catalog.timezone_hint",width=FILL,height=26,lines=2]
+ Text[component="translatable:mycinema.catalog.schedule_hall",width=FILL,height=13]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="hall_previous",component="<",enabled=schedule_editable,width=24,height=20]
+  Text[component=hall,width=FILL,height=20,ellipsize=true]
+  Button[id="hall_next",component=">",enabled=schedule_editable,width=24,height=20]
+ }
+ Text[component="translatable:mycinema.catalog.future_plan",width=FILL,height=13]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="plan_previous",component="<",enabled=plan_available,width=24,height=42]
+  Text[component=plan,width=FILL,height=42,lines=3,ellipsize=true]
+  Button[id="plan_next",component=">",enabled=plan_available,width=24,height=42]
+ }
+ Text[component="translatable:mycinema.catalog.plan_hint",width=FILL,height=26,lines=2]
+ Text[component="translatable:mycinema.catalog.start_time",width=FILL,height=13]
+ InputText[id="schedule_time",enabled=schedule_editable,suggestion="translatable:mycinema.catalog.time_hint",width=FILL,height=20]
+ Text[component=schedule_state,width=FILL,height=42,lines=3,ellipsize=true]
+ Button[id="schedule_new",component="translatable:mycinema.catalog.new_schedule",enabled=schedule_ready,width=FILL,height=20]
+ Button[id="schedule_replace",component="translatable:mycinema.catalog.replace_plan",enabled=replace_ready,width=FILL,height=20]
+ Button[id="reschedule",component="translatable:mycinema.catalog.reschedule_plan",enabled=reschedule_ready,width=FILL,height=20]
+ Text[component="translatable:mycinema.catalog.schedule_impact",width=FILL,height=42,lines=3]
+}
+Text[component=notice,width=FILL,height=32,lines=3,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="browse",component="translatable:mycinema.catalog.library",enabled=ready,width=FILL,height=20]
+ Button[id="reload",component="translatable:mycinema.catalog.reload",enabled=can_reload,width=FILL,height=20]
+ Button[id="done",component="translatable:mycinema.catalog.done",enabled=can_reload,width=FILL,height=20]
+}

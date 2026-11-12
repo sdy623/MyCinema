@@ -1,0 +1,92 @@
+theme "waterframes:waterui"
+var heading
+var editable
+var can_reload
+var notice
+var preview
+var layout
+var style_entry
+var horizontal
+var vertical
+var entry_flow_editable
+root[frame=EDGE,orientation=VERTICAL,align=STRETCH,spacing=4,padding=7]
+Text[component=heading,width=FILL,height=16,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="tab0",component="translatable:mycinema.panel.tab_text",width=FILL,height=20]
+ Button[id="tab1",component="translatable:mycinema.panel.tab_layout",width=FILL,height=20]
+ Button[id="tab2",component="translatable:mycinema.panel.tab_poster",width=FILL,height=20]
+}
+Parent[orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=4,padding=0,border=0] {
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="layout_previous",component="<",enabled=editable,width=20,height=19]
+ Text[component=layout,width=FILL,height=19,ellipsize=true]
+ Button[id="layout_next",component=">",enabled=editable,width=20,height=19]
+}
+Parent[orientation=HORIZONTAL,width=FILL,spacing=5] {
+Parent[orientation=VERTICAL,width=FILL,spacing=3] {
+Text[component="translatable:mycinema.panel.foreground_edit",width=FILL,height=12]
+InputText[id="foreground",enabled=editable,width=FILL,height=19]
+}
+Parent[orientation=VERTICAL,width=FILL,spacing=3] {
+Text[component="translatable:mycinema.panel.background_edit",width=FILL,height=12]
+InputText[id="background",enabled=editable,width=FILL,height=19]
+}
+Parent[orientation=VERTICAL,width=FILL,spacing=3] {
+Text[component="translatable:mycinema.panel.accent_edit",width=FILL,height=12]
+InputText[id="accent",enabled=editable,width=FILL,height=19]
+}
+}
+Text[component="translatable:mycinema.panel.scale_edit",width=FILL,height=12]
+InputText[id="scale",enabled=editable,width=FILL,height=19]
+Text[component="translatable:mycinema.panel.visible_fields",width=FILL,height=12]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=8] {
+ Switch[id="show_0",component="translatable:mycinema.panel.hall_label",enabled=editable,width=FILL,height=19]
+ Switch[id="show_1",component="translatable:mycinema.panel.title_label",enabled=editable,width=FILL,height=19]
+}
+Parent[orientation=HORIZONTAL,width=FILL,spacing=8] {
+ Switch[id="show_2",component="translatable:mycinema.panel.time_label",enabled=editable,width=FILL,height=19]
+ Switch[id="show_6",component="translatable:mycinema.panel.duration_label",enabled=editable,width=FILL,height=19]
+}
+Switch[id="show_7",component="translatable:mycinema.panel.format_label",enabled=editable,width=FILL,height=19]
+Text[component="translatable:mycinema.panel.visible_headers",width=FILL,height=12]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=5] {
+ Switch[id="header_2",component="translatable:mycinema.panel.title_label",enabled=editable,width=FILL,height=19]
+ Switch[id="header_4",component="translatable:mycinema.panel.time_label",enabled=editable,width=FILL,height=19]
+ Switch[id="header_64",component="translatable:mycinema.panel.duration_label",enabled=editable,width=FILL,height=19]
+}
+Switch[id="header_128",component="translatable:mycinema.panel.format_label",enabled=editable,width=FILL,height=19]
+Text[component="translatable:mycinema.panel.layout_hint",width=FILL,height=27,lines=2]
+Text[component="translatable:mycinema.panel.entry_edit",width=FILL,height=12]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="entry_previous",component="<",enabled=editable,width=20,height=19]
+ Text[component=style_entry,width=FILL,height=19,ellipsize=true]
+ Button[id="entry_next",component=">",enabled=editable,width=20,height=19]
+}
+Switch[id="entry_auto",component="translatable:mycinema.panel.entry_auto",enabled=entry_flow_editable,width=FILL,height=19]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="horizontal_previous",component="<",enabled=editable,width=20,height=19]
+ Text[component=horizontal,width=FILL,height=19,ellipsize=true]
+ Button[id="horizontal_next",component=">",enabled=editable,width=20,height=19]
+ Button[id="vertical_previous",component="<",enabled=editable,width=20,height=19]
+ Text[component=vertical,width=FILL,height=19,ellipsize=true]
+ Button[id="vertical_next",component=">",enabled=editable,width=20,height=19]
+}
+Text[component="translatable:mycinema.panel.offset_units",width=FILL,height=28,lines=2]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Text[component="X",width=12,height=19]
+ InputText[id="manual_x",enabled=editable,width=FILL,height=19]
+ Text[component="Y",width=12,height=19]
+ InputText[id="manual_y",enabled=editable,width=FILL,height=19]
+ Button[id="entry_reset",component="translatable:mycinema.panel.entry_reset",enabled=editable,width=90,height=19]
+}
+Text[component="translatable:mycinema.panel.poster_percent",width=FILL,height=28,lines=2]
+InputText[id="poster_percent",enabled=editable,width=FILL,height=19]
+Text[component="translatable:mycinema.panel.entry_hint",width=FILL,height=42,lines=3]
+}
+
+Text[component=notice,width=FILL,height=32,lines=3,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="save",component="translatable:mycinema.panel.save",enabled=editable,width=FILL,height=20]
+ Button[id="reload",component="translatable:mycinema.panel.reload",enabled=can_reload,width=FILL,height=20]
+ Button[id="done",component="translatable:mycinema.ui.done",width=FILL,height=20]
+}

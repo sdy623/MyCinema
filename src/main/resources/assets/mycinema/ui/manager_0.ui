@@ -1,0 +1,83 @@
+theme "waterframes:waterui"
+var heading
+var emergency_status
+var can_emergency_unlock
+var can_emergency_restore
+var hall_status
+var door_status
+var detail
+var notice
+var zone_status
+var binding
+var preset_name
+var show_status
+var info0
+var info1
+var info2
+var info3
+var info4
+var info5
+var info6
+var source_origin
+var seek_label
+var seek_hint
+var String programme_summary
+var can_open_programme
+final var editable
+root[frame=EDGE, orientation=VERTICAL, align=STRETCH, spacing=3, padding=6]
+Text[component=heading, width=FILL, height=14, ellipsize=true]
+Text[id="emergency_status",component=emergency_status,width=FILL,height=15,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="emergency_unlock",component="translatable:mycinema.emergency.unlock",enabled=can_emergency_unlock,width=FILL,height=22]
+ Button[id="emergency_restore",component="translatable:mycinema.emergency.restore",enabled=can_emergency_restore,width=FILL,height=22]
+}
+Parent[orientation=HORIZONTAL, width=FILL, spacing=3] {
+ Button[id="tab0", component="translatable:mycinema.ui.control", enabled=editable, width=FILL, height=19]
+ Button[id="tab1", component="translatable:mycinema.ui.devices", enabled=editable, width=FILL, height=19]
+ Button[id="tab2", component="translatable:mycinema.ui.schedule", enabled=editable, width=FILL, height=19]
+ Button[id="tab4", component="translatable:mycinema.ui.lighting", enabled=editable, width=FILL, height=19]
+ Button[id="tab3", component="translatable:mycinema.ui.information", width=FILL, height=19]
+}
+Parent[orientation=HORIZONTAL, width=FILL, spacing=3] {
+ Button[id="previous", component="<", width=20, height=18]
+ Text[component=hall_status, width=FILL, height=18, ellipsize=true]
+ Button[id="next", component=">", width=20, height=18]
+ Button[id="scope", component="translatable:mycinema.ui.scope", enabled=editable, width=62, height=18]
+}
+Text[component=detail,width=FILL,height=13,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Text[component=programme_summary,width=FILL,height=24,lines=2,ellipsize=true]
+ Button[id="programme",component="translatable:mycinema.programme.open",enabled=can_open_programme,width=104,height=24]
+}
+Text[component=seek_label,width=FILL,height=12]
+Slider[id="seek_bar",width=FILL,height=15,min=0,max=1]
+Text[component=seek_hint,width=FILL,height=16,lines=2]
+Text[component=door_status,width=FILL,height=13,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="admission_open",component="translatable:mycinema.ui.door_hold_on",width=FILL,height=19]
+ Button[id="admission_close",component="translatable:mycinema.ui.door_hold_off",width=FILL,height=19]
+}
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="open",component="translatable:mycinema.ui.admit",width=FILL,height=20]
+ Button[id="play",component="translatable:mycinema.ui.play",width=FILL,height=20]
+ Button[id="pause",component="translatable:mycinema.ui.pause",width=FILL,height=20]
+ Button[id="stop",component="translatable:mycinema.ui.stop",width=FILL,height=20]
+ Button[id="close",component="translatable:mycinema.ui.close",width=FILL,height=20]
+}
+Parent[id="manager_body",orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=3,padding=0,border=0] {
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="lights_off",component="translatable:mycinema.ui.light0",width=FILL,height=19]
+  Button[id="lights_half",component="translatable:mycinema.ui.light7",width=FILL,height=19]
+  Button[id="lights_on",component="translatable:mycinema.ui.light15",width=FILL,height=19]
+  Button[id="auto",component="translatable:mycinema.ui.automatic",width=FILL,height=19]
+ }
+ Text[component=source_origin,width=FILL,height=20,lines=2,ellipsize=true]
+ InputText[id="title",suggestion="translatable:mycinema.ui.title_hint",width=FILL,height=18]
+ InputText[id="url",suggestion="translatable:mycinema.ui.url_hint",width=FILL,height=18]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="load",component="translatable:mycinema.schedule.load_typed",width=FILL,height=19]
+  Button[id="load_show",component="translatable:mycinema.schedule.load",width=FILL,height=19]
+ }
+}
+Text[component=notice, width=FILL, height=27, lines=2, ellipsize=true]
+Button[id="done", component="translatable:mycinema.ui.done", width=FILL, height=19]

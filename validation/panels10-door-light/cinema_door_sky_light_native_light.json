@@ -1,0 +1,860 @@
+{
+  "schema": 1,
+  "test": "sky_light",
+  "dimension": "minecraft:overworld",
+  "validation_note": "Actual engine measurements. Final saved region arrays must be checked separately after clean server shutdown.",
+  "phases": [
+    {
+      "phase": "closed",
+      "game_time": 6952,
+      "door_sections": [
+        {
+          "position": [
+            -2284983,
+            -59,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            5,
+            14
+          ],
+          "section_block_index": 1513,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dlower,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2284983,
+            -58,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            6,
+            14
+          ],
+          "section_block_index": 1769,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dmiddle,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2284983,
+            -57,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            7,
+            14
+          ],
+          "section_block_index": 2025,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dupper,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2284984,
+            -59,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            5,
+            14
+          ],
+          "section_block_index": 1512,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dlower,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2284984,
+            -58,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            14
+          ],
+          "section_block_index": 1768,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dmiddle,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2284984,
+            -57,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            14
+          ],
+          "section_block_index": 2024,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dupper,powered\u003dfalse]"
+        }
+      ],
+      "samples": [
+        {
+          "position": [
+            -2284984,
+            -59,
+            -6733121
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            5,
+            15
+          ],
+          "section_block_index": 1528,
+          "relative": [
+            3,
+            1,
+            5
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -58,
+            -6733121
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            15
+          ],
+          "section_block_index": 1784,
+          "relative": [
+            3,
+            2,
+            5
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -57,
+            -6733121
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            15
+          ],
+          "section_block_index": 2040,
+          "relative": [
+            3,
+            3,
+            5
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -58,
+            -6733119
+          ],
+          "chunk": [
+            -142812,
+            -420820
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            1
+          ],
+          "section_block_index": 1560,
+          "relative": [
+            3,
+            2,
+            7
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284983,
+            -57,
+            -6733118
+          ],
+          "chunk": [
+            -142812,
+            -420820
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            7,
+            2
+          ],
+          "section_block_index": 1833,
+          "relative": [
+            4,
+            3,
+            8
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -57,
+            -6733123
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            13
+          ],
+          "section_block_index": 2008,
+          "relative": [
+            3,
+            3,
+            3
+          ],
+          "sky_light": 15,
+          "block_light": 2,
+          "can_see_sky": true,
+          "state": "Block{minecraft:air}"
+        }
+      ]
+    },
+    {
+      "phase": "open",
+      "game_time": 6982,
+      "door_sections": [
+        {
+          "position": [
+            -2284983,
+            -59,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            5,
+            14
+          ],
+          "section_block_index": 1513,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dtrue,part\u003dlower,powered\u003dtrue]"
+        },
+        {
+          "position": [
+            -2284983,
+            -58,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            6,
+            14
+          ],
+          "section_block_index": 1769,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dtrue,part\u003dmiddle,powered\u003dtrue]"
+        },
+        {
+          "position": [
+            -2284983,
+            -57,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            7,
+            14
+          ],
+          "section_block_index": 2025,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dtrue,part\u003dupper,powered\u003dtrue]"
+        },
+        {
+          "position": [
+            -2284984,
+            -59,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            5,
+            14
+          ],
+          "section_block_index": 1512,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dtrue,part\u003dlower,powered\u003dtrue]"
+        },
+        {
+          "position": [
+            -2284984,
+            -58,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            14
+          ],
+          "section_block_index": 1768,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dtrue,part\u003dmiddle,powered\u003dtrue]"
+        },
+        {
+          "position": [
+            -2284984,
+            -57,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            14
+          ],
+          "section_block_index": 2024,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dtrue,part\u003dupper,powered\u003dtrue]"
+        }
+      ],
+      "samples": [
+        {
+          "position": [
+            -2284984,
+            -59,
+            -6733121
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            5,
+            15
+          ],
+          "section_block_index": 1528,
+          "relative": [
+            3,
+            1,
+            5
+          ],
+          "sky_light": 13,
+          "block_light": 2,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -58,
+            -6733121
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            15
+          ],
+          "section_block_index": 1784,
+          "relative": [
+            3,
+            2,
+            5
+          ],
+          "sky_light": 13,
+          "block_light": 1,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -57,
+            -6733121
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            15
+          ],
+          "section_block_index": 2040,
+          "relative": [
+            3,
+            3,
+            5
+          ],
+          "sky_light": 13,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -58,
+            -6733119
+          ],
+          "chunk": [
+            -142812,
+            -420820
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            1
+          ],
+          "section_block_index": 1560,
+          "relative": [
+            3,
+            2,
+            7
+          ],
+          "sky_light": 11,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284983,
+            -57,
+            -6733118
+          ],
+          "chunk": [
+            -142812,
+            -420820
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            7,
+            2
+          ],
+          "section_block_index": 1833,
+          "relative": [
+            4,
+            3,
+            8
+          ],
+          "sky_light": 10,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -57,
+            -6733123
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            13
+          ],
+          "section_block_index": 2008,
+          "relative": [
+            3,
+            3,
+            3
+          ],
+          "sky_light": 15,
+          "block_light": 2,
+          "can_see_sky": true,
+          "state": "Block{minecraft:air}"
+        }
+      ]
+    },
+    {
+      "phase": "reclosed",
+      "game_time": 7012,
+      "door_sections": [
+        {
+          "position": [
+            -2284983,
+            -59,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            5,
+            14
+          ],
+          "section_block_index": 1513,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dlower,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2284983,
+            -58,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            6,
+            14
+          ],
+          "section_block_index": 1769,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dmiddle,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2284983,
+            -57,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            7,
+            14
+          ],
+          "section_block_index": 2025,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dupper,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2284984,
+            -59,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            5,
+            14
+          ],
+          "section_block_index": 1512,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dlower,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2284984,
+            -58,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            14
+          ],
+          "section_block_index": 1768,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dmiddle,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2284984,
+            -57,
+            -6733122
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            14
+          ],
+          "section_block_index": 2024,
+          "state": "Block{mycinema:cinema_door_wood}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dupper,powered\u003dfalse]"
+        }
+      ],
+      "samples": [
+        {
+          "position": [
+            -2284984,
+            -59,
+            -6733121
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            5,
+            15
+          ],
+          "section_block_index": 1528,
+          "relative": [
+            3,
+            1,
+            5
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -58,
+            -6733121
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            15
+          ],
+          "section_block_index": 1784,
+          "relative": [
+            3,
+            2,
+            5
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -57,
+            -6733121
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            15
+          ],
+          "section_block_index": 2040,
+          "relative": [
+            3,
+            3,
+            5
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -58,
+            -6733119
+          ],
+          "chunk": [
+            -142812,
+            -420820
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            1
+          ],
+          "section_block_index": 1560,
+          "relative": [
+            3,
+            2,
+            7
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284983,
+            -57,
+            -6733118
+          ],
+          "chunk": [
+            -142812,
+            -420820
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            7,
+            2
+          ],
+          "section_block_index": 1833,
+          "relative": [
+            4,
+            3,
+            8
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2284984,
+            -57,
+            -6733123
+          ],
+          "chunk": [
+            -142812,
+            -420821
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            13
+          ],
+          "section_block_index": 2008,
+          "relative": [
+            3,
+            3,
+            3
+          ],
+          "sky_light": 15,
+          "block_light": 2,
+          "can_see_sky": true,
+          "state": "Block{minecraft:air}"
+        }
+      ]
+    }
+  ]
+}

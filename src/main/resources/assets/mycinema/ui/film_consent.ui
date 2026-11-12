@@ -1,0 +1,8 @@
+theme "waterframes:waterui"
+root[frame=EDGE,orientation=VERTICAL,align=STRETCH,spacing=4,padding=6]
+Text[component="translatable:mycinema.catalog.confirm_title",width=FILL,height=15]
+Parent[id="consent_content",orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=4,padding=0,border=0]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="consent_confirm",component="translatable:gui.yes",width=FILL,height=20]
+ Button[id="consent_cancel",component="translatable:gui.no",width=FILL,height=20]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["III", "GPA", "IRI"],
+  "key": {
+    "I": { "item": "minecraft:iron_block" },
+    "G": { "item": "minecraft:tinted_glass" },
+    "P": { "item": "mycinema:cinema_projector" },
+    "A": { "item": "minecraft:amethyst_block" },
+    "R": { "item": "minecraft:redstone_block" }
+  },
+  "result": { "id": "mycinema:imax_gt_projector", "count": 1 }
+}

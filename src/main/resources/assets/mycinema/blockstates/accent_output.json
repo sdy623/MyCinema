@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "power=0": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=1": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=2": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=3": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=4": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=5": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=6": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=7": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=8": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=9": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=10": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=11": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=12": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=13": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=14": {
+      "model": "mycinema:block/accent_output"
+    },
+    "power=15": {
+      "model": "mycinema:block/accent_output"
+    }
+  }
+}

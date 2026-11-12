@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "mycinema:block/gray_wool_half_depth_slab"
+    },
+    "facing=west": {
+      "model": "mycinema:block/gray_wool_half_depth_slab",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "mycinema:block/gray_wool_half_depth_slab",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "mycinema:block/gray_wool_half_depth_slab",
+      "y": 270
+    }
+  }
+}

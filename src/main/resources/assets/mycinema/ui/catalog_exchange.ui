@@ -1,0 +1,23 @@
+theme "waterframes:waterui"
+var notice
+var selection
+var conflict
+var ready
+var can_preview
+var can_commit
+root[frame=EDGE,orientation=VERTICAL,align=STRETCH,spacing=4,padding=6]
+Text[component="translatable:mycinema.catalog.exchange_title",width=FILL,height=16]
+Text[component=selection,width=FILL,height=28,lines=2,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="choose",component="translatable:mycinema.catalog.exchange_choose",enabled=ready,width=FILL,height=21]
+ Button[id="export",component="translatable:mycinema.catalog.exchange_export",enabled=ready,width=FILL,height=21]
+}
+Text[component=conflict,width=FILL,height=28,lines=2,ellipsize=true]
+Button[id="policy",component="translatable:mycinema.catalog.exchange_change_conflict",enabled=ready,width=FILL,height=21]
+Button[id="preview",component="translatable:mycinema.catalog.exchange_preview",enabled=can_preview,width=FILL,height=21]
+Parent[id="exchange_review",orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=3,padding=0,border=0]
+Text[component=notice,width=FILL,height=40,lines=3,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="commit",component="translatable:mycinema.catalog.exchange_commit",enabled=can_commit,width=FILL,height=21]
+ Button[id="done",component="translatable:mycinema.catalog.done",width=90,height=21]
+}

@@ -1,0 +1,20 @@
+{
+  "textures": {
+    "particle": "minecraft:block/black_concrete",
+    "body": "minecraft:block/black_concrete"
+  },
+  "elements": [
+    {
+      "from": [4, 0, 6],
+      "to": [12, 0.5, 10],
+      "faces": {
+        "north": {"texture": "#body"},
+        "south": {"texture": "#body"},
+        "east": {"texture": "#body"},
+        "west": {"texture": "#body"},
+        "up": {"texture": "#body"},
+        "down": {"texture": "#body"}
+      }
+    }
+  ]
+}

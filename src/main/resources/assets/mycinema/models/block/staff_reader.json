@@ -1,0 +1,217 @@
+{
+  "credit": "MyCinema wall-mounted RFID reader. New pixel-native artwork; no authorization semantics in the cyan standby mark.",
+  "ambientocclusion": true,
+  "textures": {
+    "particle": "mycinema:block/staff_reader",
+    "reader": "mycinema:block/staff_reader"
+  },
+  "elements": [
+    {
+      "name": "wall_mount",
+      "from": [
+        5.75,
+        4.25,
+        15.6
+      ],
+      "to": [
+        10.25,
+        11.75,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            2,
+            2,
+            4
+          ],
+          "texture": "#reader"
+        },
+        "east": {
+          "uv": [
+            0,
+            2,
+            2,
+            4
+          ],
+          "texture": "#reader"
+        },
+        "south": {
+          "uv": [
+            0,
+            2,
+            2,
+            4
+          ],
+          "texture": "#reader"
+        },
+        "west": {
+          "uv": [
+            0,
+            2,
+            2,
+            4
+          ],
+          "texture": "#reader"
+        },
+        "up": {
+          "uv": [
+            0,
+            2,
+            2,
+            4
+          ],
+          "texture": "#reader"
+        },
+        "down": {
+          "uv": [
+            0,
+            2,
+            2,
+            4
+          ],
+          "texture": "#reader"
+        }
+      }
+    },
+    {
+      "name": "slim_housing",
+      "from": [
+        5.5,
+        4,
+        15
+      ],
+      "to": [
+        10.5,
+        12,
+        15.85
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#reader"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#reader"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#reader"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#reader"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#reader"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#reader"
+        }
+      }
+    },
+    {
+      "name": "rfid_face",
+      "from": [
+        5.5,
+        4,
+        14.75
+      ],
+      "to": [
+        10.5,
+        12,
+        15
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            0,
+            13,
+            16
+          ],
+          "texture": "#reader"
+        },
+        "east": {
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "texture": "#reader"
+        },
+        "south": {
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "texture": "#reader"
+        },
+        "west": {
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "texture": "#reader"
+        },
+        "up": {
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "texture": "#reader"
+        },
+        "down": {
+          "uv": [
+            14,
+            0,
+            16,
+            2
+          ],
+          "texture": "#reader"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "schema": 1,
+  "test": "block_light",
+  "dimension": "minecraft:overworld",
+  "validation_note": "Actual engine measurements. Final saved region arrays must be checked separately after clean server shutdown.",
+  "phases": [
+    {
+      "phase": "closed",
+      "game_time": 37057,
+      "door_sections": [
+        {
+          "position": [
+            -2285047,
+            -59,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            5,
+            14
+          ],
+          "section_block_index": 1513,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dlower,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285047,
+            -58,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            6,
+            14
+          ],
+          "section_block_index": 1769,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dmiddle,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285047,
+            -57,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            7,
+            14
+          ],
+          "section_block_index": 2025,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dupper,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285048,
+            -59,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            5,
+            14
+          ],
+          "section_block_index": 1512,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dlower,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285048,
+            -58,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            14
+          ],
+          "section_block_index": 1768,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dmiddle,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285048,
+            -57,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            14
+          ],
+          "section_block_index": 2024,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dupper,powered\u003dfalse]"
+        }
+      ],
+      "samples": [
+        {
+          "position": [
+            -2285048,
+            -57,
+            -6732769
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            15
+          ],
+          "section_block_index": 2040,
+          "relative": [
+            2,
+            3,
+            5
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2285048,
+            -58,
+            -6732768
+          ],
+          "chunk": [
+            -142816,
+            -420798
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            0
+          ],
+          "section_block_index": 1544,
+          "relative": [
+            2,
+            2,
+            6
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        }
+      ]
+    },
+    {
+      "phase": "open",
+      "game_time": 37077,
+      "door_sections": [
+        {
+          "position": [
+            -2285047,
+            -59,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            5,
+            14
+          ],
+          "section_block_index": 1513,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dtrue,part\u003dlower,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285047,
+            -58,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            6,
+            14
+          ],
+          "section_block_index": 1769,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dtrue,part\u003dmiddle,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285047,
+            -57,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            7,
+            14
+          ],
+          "section_block_index": 2025,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dtrue,part\u003dupper,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285048,
+            -59,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            5,
+            14
+          ],
+          "section_block_index": 1512,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dtrue,part\u003dlower,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285048,
+            -58,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            14
+          ],
+          "section_block_index": 1768,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dtrue,part\u003dmiddle,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285048,
+            -57,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            14
+          ],
+          "section_block_index": 2024,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dtrue,part\u003dupper,powered\u003dfalse]"
+        }
+      ],
+      "samples": [
+        {
+          "position": [
+            -2285048,
+            -57,
+            -6732769
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            15
+          ],
+          "section_block_index": 2040,
+          "relative": [
+            2,
+            3,
+            5
+          ],
+          "sky_light": 0,
+          "block_light": 11,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2285048,
+            -58,
+            -6732768
+          ],
+          "chunk": [
+            -142816,
+            -420798
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            0
+          ],
+          "section_block_index": 1544,
+          "relative": [
+            2,
+            2,
+            6
+          ],
+          "sky_light": 0,
+          "block_light": 11,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        }
+      ]
+    },
+    {
+      "phase": "reclosed",
+      "game_time": 37097,
+      "door_sections": [
+        {
+          "position": [
+            -2285047,
+            -59,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            5,
+            14
+          ],
+          "section_block_index": 1513,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dlower,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285047,
+            -58,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            6,
+            14
+          ],
+          "section_block_index": 1769,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dmiddle,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285047,
+            -57,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            9,
+            7,
+            14
+          ],
+          "section_block_index": 2025,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dleft,open\u003dfalse,part\u003dupper,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285048,
+            -59,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            5,
+            14
+          ],
+          "section_block_index": 1512,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dlower,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285048,
+            -58,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            14
+          ],
+          "section_block_index": 1768,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dmiddle,powered\u003dfalse]"
+        },
+        {
+          "position": [
+            -2285048,
+            -57,
+            -6732770
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            14
+          ],
+          "section_block_index": 2024,
+          "state": "Block{mycinema:cinema_door_metal}[access\u003dpublic,facing\u003dsouth,half_drop\u003dfalse,hinge\u003dright,open\u003dfalse,part\u003dupper,powered\u003dfalse]"
+        }
+      ],
+      "samples": [
+        {
+          "position": [
+            -2285048,
+            -57,
+            -6732769
+          ],
+          "chunk": [
+            -142816,
+            -420799
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            7,
+            15
+          ],
+          "section_block_index": 2040,
+          "relative": [
+            2,
+            3,
+            5
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        },
+        {
+          "position": [
+            -2285048,
+            -58,
+            -6732768
+          ],
+          "chunk": [
+            -142816,
+            -420798
+          ],
+          "section_y": -4,
+          "local": [
+            8,
+            6,
+            0
+          ],
+          "section_block_index": 1544,
+          "relative": [
+            2,
+            2,
+            6
+          ],
+          "sky_light": 0,
+          "block_light": 0,
+          "can_see_sky": false,
+          "state": "Block{minecraft:air}"
+        }
+      ]
+    }
+  ]
+}

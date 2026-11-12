@@ -1,0 +1,8 @@
+{
+  "multipart": [
+    { "when": { "facing": "north" }, "apply": { "model": "mycinema:block/imax_gt_projector", "y": 0 } },
+    { "when": { "facing": "east" }, "apply": { "model": "mycinema:block/imax_gt_projector", "y": 90 } },
+    { "when": { "facing": "south" }, "apply": { "model": "mycinema:block/imax_gt_projector", "y": 180 } },
+    { "when": { "facing": "west" }, "apply": { "model": "mycinema:block/imax_gt_projector", "y": 270 } }
+  ]
+}

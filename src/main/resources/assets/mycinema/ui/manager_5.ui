@@ -1,0 +1,47 @@
+theme "waterframes:waterui"
+var heading
+var emergency_status
+var can_emergency_unlock
+var can_emergency_restore
+var hall_status
+var notice
+var edit_heading
+var edit_impact
+final var editable
+root[frame=EDGE, orientation=VERTICAL, align=STRETCH, spacing=3, padding=6]
+Text[component=heading,width=FILL,height=14]
+Text[id="emergency_status",component=emergency_status,width=FILL,height=15,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="emergency_unlock",component="translatable:mycinema.emergency.unlock",enabled=can_emergency_unlock,width=FILL,height=22]
+ Button[id="emergency_restore",component="translatable:mycinema.emergency.restore",enabled=can_emergency_restore,width=FILL,height=22]
+}
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="tab0",component="translatable:mycinema.ui.control",width=FILL,height=19]
+ Button[id="tab1",component="translatable:mycinema.ui.devices",width=FILL,height=19]
+ Button[id="tab2",component="translatable:mycinema.ui.schedule",width=FILL,height=19]
+ Button[id="tab4",component="translatable:mycinema.ui.lighting",width=FILL,height=19]
+ Button[id="tab3",component="translatable:mycinema.ui.information",width=FILL,height=19]
+}
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="previous",component="<",width=20,height=18,enabled=false]
+ Text[component=hall_status,width=FILL,height=18,ellipsize=true]
+ Button[id="next",component=">",width=20,height=18,enabled=false]
+ Button[id="scope",component="translatable:mycinema.ui.scope",width=62,height=18,enabled=false]
+}
+Parent[id="manager_body",orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=3,padding=0,border=0] {
+ Text[component=edit_heading,width=FILL,height=18]
+ Text[component=edit_impact,width=FILL,height=30,lines=2]
+ Text[component="translatable:mycinema.schedule.title_label",width=FILL,height=10]
+ InputText[id="show_title",width=FILL,height=20]
+ Text[component="translatable:mycinema.schedule.source_label",width=FILL,height=10]
+ InputText[id="show_url",width=FILL,height=20]
+ Text[component="translatable:mycinema.schedule.time_label",width=FILL,height=10]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  InputText[id="show_time",width=FILL,height=20]
+  InputText[id="show_minutes",width=60,height=20]
+ }
+}
+Button[id="save_show",component="translatable:mycinema.schedule.review_save",width=FILL,height=21]
+Button[id="editor_back",component="translatable:mycinema.schedule.back",width=FILL,height=19]
+Text[component=notice,width=FILL,height=29,lines=2]
+Button[id="done",component="translatable:mycinema.ui.done",width=FILL,height=19]

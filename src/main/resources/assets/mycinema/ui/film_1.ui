@@ -1,0 +1,103 @@
+theme "waterframes:waterui"
+var heading
+var notice
+var ready
+var can_reload
+var can_select
+var selected
+var runtime
+var hall
+var has_hall
+var zone
+var editor_heading
+var draft_state
+var poster_status
+var poster_busy
+var draft_editable
+var can_add
+var can_remove
+var can_up
+var can_down
+var source_page
+var source_selected
+var source_previous
+var source_next
+var source_row_0
+var source_row_1
+var source_row_2
+var source_row_3
+var source_row_4
+var source_row_5
+var source_available_0
+var source_available_1
+var source_available_2
+var source_available_3
+var source_available_4
+var source_available_5
+root[frame=EDGE,orientation=VERTICAL,align=STRETCH,spacing=3,padding=6]
+Text[component=heading,width=FILL,height=15,ellipsize=true]
+Text[component=editor_heading,width=FILL,height=14,ellipsize=true]
+Parent[id="film_scroll",orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=3,padding=0,border=0] {
+ Text[component=draft_state,width=FILL,height=26,lines=2,ellipsize=true]
+ Text[component="translatable:mycinema.catalog.display_title",width=FILL,height=12]
+ InputText[id="film_title",enabled=draft_editable,width=FILL,height=20]
+ Text[component="translatable:mycinema.catalog.poster_reference",width=FILL,height=12]
+ InputText[id="film_poster",enabled=draft_editable,suggestion="translatable:mycinema.catalog.poster_hint",width=FILL,height=20]
+ Text[component=poster_status,width=FILL,height=40,lines=3]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="poster_upload",component="translatable:mycinema.catalog.poster_upload",enabled=draft_editable,width=FILL,height=20]
+  Button[id="poster_cancel",component="translatable:mycinema.catalog.poster_cancel",enabled=poster_busy,width=FILL,height=20]
+ }
+ Text[component="translatable:mycinema.catalog.poster_reference_hint",width=FILL,height=44,lines=4]
+ Text[component="translatable:mycinema.catalog.programme",width=FILL,height=13]
+ Text[component="translatable:mycinema.catalog.programme_hint",width=FILL,height=26,lines=2]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="source_row_0",component="1",enabled=source_available_0,width=24,height=20]
+  Text[component=source_row_0,width=FILL,height=20,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="source_row_1",component="2",enabled=source_available_1,width=24,height=20]
+  Text[component=source_row_1,width=FILL,height=20,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="source_row_2",component="3",enabled=source_available_2,width=24,height=20]
+  Text[component=source_row_2,width=FILL,height=20,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="source_row_3",component="4",enabled=source_available_3,width=24,height=20]
+  Text[component=source_row_3,width=FILL,height=20,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="source_row_4",component="5",enabled=source_available_4,width=24,height=20]
+  Text[component=source_row_4,width=FILL,height=20,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="source_row_5",component="6",enabled=source_available_5,width=24,height=20]
+  Text[component=source_row_5,width=FILL,height=20,ellipsize=true]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="source_previous",component="<",enabled=source_previous,width=24,height=19]
+  Text[component=source_page,width=FILL,height=19,ellipsize=true]
+  Button[id="source_next",component=">",enabled=source_next,width=24,height=19]
+ }
+ Text[component=source_selected,width=FILL,height=13]
+ InputText[id="film_source",enabled=draft_editable,suggestion="translatable:mycinema.catalog.source_hint",width=FILL,height=20]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="source_add",component="translatable:mycinema.catalog.add_source",enabled=can_add,width=FILL,height=20]
+  Button[id="source_duplicate",component="translatable:mycinema.catalog.duplicate_source",enabled=can_add,width=FILL,height=20]
+  Button[id="source_remove",component="translatable:mycinema.catalog.remove_source",enabled=can_remove,width=FILL,height=20]
+ }
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+  Button[id="source_up",component="translatable:mycinema.catalog.move_up",enabled=can_up,width=FILL,height=20]
+  Button[id="source_down",component="translatable:mycinema.catalog.move_down",enabled=can_down,width=FILL,height=20]
+ }
+ Text[component=runtime,width=FILL,height=14,ellipsize=true]
+ Text[component="translatable:mycinema.catalog.runtime_readonly",width=FILL,height=26,lines=2]
+}
+Text[component=notice,width=FILL,height=32,lines=3,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=3] {
+ Button[id="save",component="translatable:mycinema.catalog.save",enabled=draft_editable,width=FILL,height=20]
+ Button[id="browse",component="translatable:mycinema.catalog.library",enabled=ready,width=FILL,height=20]
+ Button[id="reload",component="translatable:mycinema.catalog.reload",enabled=can_reload,width=FILL,height=20]
+ Button[id="done",component="translatable:mycinema.catalog.done",enabled=can_reload,width=FILL,height=20]
+}

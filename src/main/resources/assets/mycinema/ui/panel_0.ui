@@ -1,0 +1,58 @@
+theme "waterframes:waterui"
+var heading
+var editable
+var can_reload
+var notice
+var preview
+var layout
+var scope
+var hall_editable
+var binding_status
+var schedule_status
+var mode_help
+var binding_steps
+var terminal_role
+var terminal_role_editable
+var terminal_role_help
+root[frame=EDGE,orientation=VERTICAL,align=STRETCH,spacing=4,padding=7]
+Text[component=heading,width=FILL,height=16,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="tab0",component="translatable:mycinema.panel.tab_text",width=FILL,height=20]
+ Button[id="tab1",component="translatable:mycinema.panel.tab_layout",width=FILL,height=20]
+ Button[id="tab2",component="translatable:mycinema.panel.tab_poster",width=FILL,height=20]
+}
+Parent[orientation=VERTICAL,width=FILL,height=FILL,scrollY=true,spacing=4,padding=0,border=0] {
+ Text[component=terminal_role,width=FILL,height=20,ellipsize=true]
+ Button[id="terminal_role_toggle",component="translatable:mycinema.operations.change_role",enabled=terminal_role_editable,width=FILL,height=20]
+ Text[component=terminal_role_help,width=FILL,height=48,lines=4]
+ Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+  Button[id="scope_previous",component="<",enabled=editable,width=20,height=19]
+  Text[component=scope,width=FILL,height=19,ellipsize=true]
+  Button[id="scope_next",component=">",enabled=editable,width=20,height=19]
+ }
+ Text[component=mode_help,width=FILL,height=36,lines=3]
+ Text[component=binding_status,width=FILL,height=26,lines=2]
+ Text[component=schedule_status,width=FILL,height=36,lines=3]
+ Text[component=binding_steps,width=FILL,height=70,lines=5]
+ Text[component="translatable:mycinema.panel.auto_hint",width=FILL,height=26,lines=2]
+ Text[component="translatable:mycinema.panel.hall_edit",width=FILL,height=12]
+ InputText[id="hall",enabled=hall_editable,width=FILL,height=19]
+ Text[component="translatable:mycinema.panel.hall_override_hint",width=FILL,height=26,lines=2]
+ Text[component="translatable:mycinema.panel.title_edit",width=FILL,height=12]
+ InputText[id="title",enabled=hall_editable,width=FILL,height=19]
+ Text[component="translatable:mycinema.panel.time_edit",width=FILL,height=12]
+ InputText[id="time",enabled=hall_editable,width=FILL,height=19]
+ Text[component="translatable:mycinema.panel.time_end_edit",width=FILL,height=12]
+ InputText[id="time_end",enabled=hall_editable,width=FILL,height=19]
+ Text[component="translatable:mycinema.panel.duration_edit",width=FILL,height=12]
+ InputText[id="duration",enabled=hall_editable,width=FILL,height=19]
+ Text[component="translatable:mycinema.panel.format_edit",width=FILL,height=12]
+ InputText[id="format",enabled=hall_editable,width=FILL,height=19]
+ Text[component="translatable:mycinema.panel.format_hint",width=FILL,height=26,lines=2]
+}
+Text[component=notice,width=FILL,height=32,lines=3,ellipsize=true]
+Parent[orientation=HORIZONTAL,width=FILL,spacing=4] {
+ Button[id="save",component="translatable:mycinema.panel.save",enabled=editable,width=FILL,height=20]
+ Button[id="reload",component="translatable:mycinema.panel.reload",enabled=can_reload,width=FILL,height=20]
+ Button[id="done",component="translatable:mycinema.ui.done",width=FILL,height=20]
+}
